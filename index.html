@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前端，WEB开发，阅读">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lizer的博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Lizer的博客">
+<meta property="og:description" content="前端，WEB开发，阅读">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lizer的博客">
+<meta name="twitter:description" content="前端，WEB开发，阅读">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Lizer的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lizer的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">弄个博客玩玩</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/Mac下更新npm报错/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/13/Mac下更新npm报错/" itemprop="url">Mac下更新npm报错</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T17:24:10+08:00">
+                2018-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在mac下用命令：<code>npm i -g npm</code>更新npm版本报错，报错信息如下：<br><img src="/img/4853241-cec61f1cffac241f.png" alt="屏幕快照 2018-05-13 下午4.58.32.png"><br>解决方法：<br>在命令前面加上sudo：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sodu npm i -g npm</span><br></pre></td></tr></table></figure></p>
+<p>安装成功。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/css3 box-flex属性（弹性盒子）学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/13/css3 box-flex属性（弹性盒子）学习笔记/" itemprop="url">css3 box-flex属性（弹性盒子）学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T15:49:22+08:00">
+                2018-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>弹性盒子是 CSS3 的一种新的布局模式。</p>
+<p>当页面需要适应不同的屏幕大小以及设备类型时，使用弹性盒子布局模式可以确保元素拥有恰当的行为。</p>
+<h3 id="使用场景1"><a href="#使用场景1" class="headerlink" title="使用场景1"></a>使用场景1</h3><p>将一个div划分成多份，每一份占有某比例的宽度，无论在任何大小的设备屏幕上，此比例都保持不变。<br>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:red;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>首先父元素必须添加必要的声明：<code>display:box</code>或者<code>display:inline-box</code>；<br>三个并列的子元素每一个都声明了<code>box-flex: 1;</code>，这说明每一个子div都将占据父div的三分之一容量。<br>结果：<br><img src="/img/4853241-1c7b7977f9dcbaba.png" alt="image.png"></p>
+<h3 id="使用场景2"><a href="#使用场景2" class="headerlink" title="使用场景2"></a>使用场景2</h3><p>将一个div划分成多份，其中有一份的宽度是固定的，除定宽的这份之外其他的每一份占有余下容量的某比例的宽度，无论在任何大小的设备屏幕上，此比例都保持不变。<br>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	<span class="comment">/*-moz-box-flex: 1; </span></span><br><span class="line"><span class="comment">                -webkit-box-flex: 1; </span></span><br><span class="line"><span class="comment">                box-flex: 1;*/</span></span><br><span class="line">                width:<span class="number">30</span>px;</span><br><span class="line">                background-color:red;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">2</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">2</span>; </span><br><span class="line">                box-flex: <span class="number">2</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-a72dc13757ba78c3.png" alt="image.png"><br>如图所示，第一个子div——child_box_one固定占有30px的宽度，剩下两个子div按2:1的比例分配父div宽度减掉30px后剩下的容量。</p>
+<h3 id="margin和padding的影响"><a href="#margin和padding的影响" class="headerlink" title="margin和padding的影响"></a>margin和padding的影响</h3><p>如果某一个子div增加了magin/padding的属性，应该是先用可分配宽度减去margin/padding的宽度，剩下的宽度再按相应的比例分配给不同的子div。<br>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	<span class="comment">/*-moz-box-flex: 1; </span></span><br><span class="line"><span class="comment">                -webkit-box-flex: 1; </span></span><br><span class="line"><span class="comment">                box-flex: 1;*/</span></span><br><span class="line">                width:<span class="number">30</span>px;</span><br><span class="line">                background-color:red;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">2</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">2</span>; </span><br><span class="line">                box-flex: <span class="number">2</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">                margin:<span class="number">0</span> <span class="number">30</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-e4af3746f82f8d46.png" alt="image.png"><br>可以看到，定宽的红色div宽度不变，虽然我们只给蓝色div加了margin，但事实上蓝色div和黄色div的分配到的宽度都减少了。</p>
+<h3 id="父标签的可选属性-box-orient"><a href="#父标签的可选属性-box-orient" class="headerlink" title="父标签的可选属性:box-orient"></a>父标签的可选属性:box-orient</h3><p>box-orient用来确定子元素的方向，是横着排还是竖着走。可选的值有：<br>horizontal | vertical | inline-axis | block-axis | inherit<br>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">400</span>px;</span><br><span class="line">                -moz-box-orient:vertical; </span><br><span class="line">                -webkit-box-orient:vertical; </span><br><span class="line">                -o-box-orient:vertical; </span><br><span class="line">                box-orient:vertical; </span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:red;</span><br><span class="line">                width: <span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">                width: <span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">                width: <span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-242f3a9a8c0e8229.png" alt="image.png"><br>父div中设置<code>box-orient:vertical;</code>子div就变成纵向排列了。</p>
+<h3 id="父标签的可选属性-box-align"><a href="#父标签的可选属性-box-align" class="headerlink" title="父标签的可选属性:box-align"></a>父标签的可选属性:box-align</h3><p>直接看代码吧：<br>box-align属性设置为top时：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">                -moz-box-align:top; </span><br><span class="line">                -webkit-box-align:top; </span><br><span class="line">                -o-box-align:top; </span><br><span class="line">                box-align:top; </span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:red;</span><br><span class="line">                height:<span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">                height:<span class="number">200</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">                height:<span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-a2326fb2d14bb1e7.png" alt="image.png"><br>可以看到三个子div是顶部对齐的。</p>
+<p>box-align属性设置为center时：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">                -moz-box-align:center; </span><br><span class="line">                -webkit-box-align:center; </span><br><span class="line">                -o-box-align:center; </span><br><span class="line">                box-align:center; </span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:red;</span><br><span class="line">                height:<span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:blue;</span><br><span class="line">                height:<span class="number">200</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	-moz-box-flex: <span class="number">1</span>; </span><br><span class="line">                -webkit-box-flex: <span class="number">1</span>; </span><br><span class="line">                box-flex: <span class="number">1</span>;</span><br><span class="line">                background-color:yellow;</span><br><span class="line">                height:<span class="number">100</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;<span class="number">1</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-1e90663e6007bf6a.png" alt="image.png"></p>
+<p>可以看到，三个子div是居中对齐的。</p>
+<h3 id="父标签的可选属性-box-pack"><a href="#父标签的可选属性-box-pack" class="headerlink" title="父标签的可选属性:box-pack"></a>父标签的可选属性:box-pack</h3><p>box-align控制了子div垂直方向上的对齐方式，box-pack则控制了子div水平方向上的对齐方式，可选值有：start | end | center | justify。<br>例如：justify属性值控制子div两端对齐：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">            .father_box&#123;</span><br><span class="line">            	display: -moz-box; </span><br><span class="line">                display: -webkit-box; </span><br><span class="line">                display: box; </span><br><span class="line">                height:<span class="number">300</span>px;</span><br><span class="line">                -moz-box-pack:justify; </span><br><span class="line">                -webkit-box-pack:justify; </span><br><span class="line">                -o-box-pack:justify; </span><br><span class="line">                box-pack:justify; </span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_one&#123;</span><br><span class="line">            	<span class="comment">/*-moz-box-flex: 1; </span></span><br><span class="line"><span class="comment">                -webkit-box-flex: 1; </span></span><br><span class="line"><span class="comment">                box-flex: 1;*/</span></span><br><span class="line">                background-color:red;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_two&#123;</span><br><span class="line">            	<span class="comment">/*-moz-box-flex: 1; </span></span><br><span class="line"><span class="comment">                -webkit-box-flex: 1; </span></span><br><span class="line"><span class="comment">                box-flex: 1;*/</span></span><br><span class="line">                background-color:blue;</span><br><span class="line">            &#125;</span><br><span class="line">            .child_box_three&#123;</span><br><span class="line">            	<span class="comment">/*-moz-box-flex: 1; </span></span><br><span class="line"><span class="comment">                -webkit-box-flex: 1; </span></span><br><span class="line"><span class="comment">                box-flex: 1;*/</span></span><br><span class="line">                background-color:yellow;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"father_box"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_one"</span>&gt;hahahaha1&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="child_box_two"&gt;hahahaha2&lt;/</span>div&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"child_box_three"</span>&gt;hahahaha3&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="/img/4853241-8201dbe8c3ef7aba.png" alt="image.png"><br>若将属性值改为end，效果则是：<br><img src="/img/4853241-09de8f645500e8c2.png" alt="image.png"></p>
+<p>参考文章：<br><a href="http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex%E5%B1%9E%E6%80%A7%EF%BC%8C%E7%84%B6%E5%90%8E%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/" target="_blank" rel="noopener">http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex%E5%B1%9E%E6%80%A7%EF%BC%8C%E7%84%B6%E5%90%8E%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/初学render/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/初学render/" itemprop="url">初学render</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T15:24:04+08:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一般情况下，在vue中，我们定义组件时，都使用template（模板）来创建HTML，但如果我们的HTML需要使用javaScript来生成的话，应该怎么办?</p>
+<h3 id="1、render函数的使用意义"><a href="#1、render函数的使用意义" class="headerlink" title="1、render函数的使用意义"></a>1、render函数的使用意义</h3><p>渲染节点</p>
+<h3 id="2、示例"><a href="#2、示例" class="headerlink" title="2、示例"></a>2、示例</h3><p>官方文档给我们提供了一个很好理解的例子：<br>我们需要创建一个这样的组件：<br><code>&lt;anchored-heading :level=&quot;1&quot;&gt;Hello world!&lt;/anchored-heading&gt;</code><br>当level传入1时，渲染出来的html内容就是<code>&lt;h1&gt;Hello world&lt;/h1&gt;</code>，传入2时，渲染出来的html内容就是<code>&lt;h2&gt;Hello world&lt;/h2&gt;</code>……<br>很明显我们想渲染的节点标签不是写死在模板里的。<br>使用render来实现该组件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,   <span class="comment">// 标签名称</span></span><br><span class="line">      <span class="keyword">this</span>.$slots.default <span class="comment">// 由子节点构成的数组</span></span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    level: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>render是一个渲染函数，返回值是DOM节点。<br>示例代码第三行：我们在createElement()这个函数里传了两个参数，第一个参数是节点名称，跟this.level挂钩，this.level是1，节点名称就是<code>&lt;h1&gt;</code>，是2节点名称就是<code>&lt;h2&gt;</code>，第二个参数是节点下的子节点，$slots.defult的含义可查询官网api中的实例属性： <a href="https://vuefe.cn/v2/api/#vm-slots" target="_blank" rel="noopener">https://vuefe.cn/v2/api/#vm-slots</a> ，它得到的是所有没有被包含在具名slot中的节点。由此render函数渲染出新节点。<br>附createElement函数的定义：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @returns &#123;VNode&#125;</span></span><br><span class="line">createElement(</span><br><span class="line">  <span class="comment">//第一个参数： &#123;String | Object | Function&#125;.（必填项）</span></span><br><span class="line">  <span class="comment">// 一个 HTML 标签，组件设置，或一个函数</span></span><br><span class="line">  <span class="comment">// 必须 Return 上述其中一个，例如"div"</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 第二个参数：&#123;Object&#125;</span></span><br><span class="line">  <span class="comment">// 一个对应属性的数据对象.（可选项）</span></span><br><span class="line">  <span class="comment">//例如，样式属性：&#123;style: &#123;color: 'red',fontSize: '20px'&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//第三个参数： &#123;String | Array&#125;</span></span><br><span class="line">  <span class="comment">// 子节点(VNodes).（可选项）</span></span><br><span class="line"> <span class="comment">//例如：</span></span><br><span class="line"> <span class="comment">// [</span></span><br><span class="line">   <span class="comment">// createElement('h1', 'hello world'),</span></span><br><span class="line">   <span class="comment">//"&lt;p&gt;哈哈哈&lt;/p&gt;"</span></span><br><span class="line">  <span class="comment">//]</span></span><br><span class="line">  <span class="comment">//这里我们可以传入数组，也可以直接传入一段节点中的文本内容（String），实际上节点内的文本内容也属于它的子节点。</span></span><br></pre></td></tr></table></figure></p>
+<p>在render函数中我们可以直接使用原生js来实现v-if、v-for等指令。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/25/一个例子学习Vue2.0组件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/25/一个例子学习Vue2.0组件/" itemprop="url">一个例子学习Vue2.0组件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T11:17:01+08:00">
+                2018-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先看例子效果，是个简单的选择输入框：<br><img src="/img/4853241-c5903ee01d9fb832.png" alt="image.png"></p>
+<p>这个例子将Vue组件的学习简化为三部分：</p>
+<ul>
+<li>组件注册（全局注册和局部注册）</li>
+<li>组件组合（父子组件间的通信）</li>
+<li>组件复用（Prop、事件、插槽）<h3 id="1、组件注册"><a href="#1、组件注册" class="headerlink" title="1、组件注册"></a>1、组件注册</h3><h4 id="全局注册和局部注册"><a href="#全局注册和局部注册" class="headerlink" title="全局注册和局部注册"></a>全局注册和局部注册</h4>官方文档已经给出了全局注册和局部注册的实例代码：<br>全局注册<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 注册</span><br><span class="line">Vue.component(&apos;my-component&apos;, &#123;</span><br><span class="line">  template: &apos;&lt;div&gt;A custom component!&lt;/div&gt;&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>局部注册<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;<span class="comment">//声明一个vue实例</span></span><br><span class="line">      el: <span class="string">'#main'</span>,</span><br><span class="line">      components: &#123;<span class="comment">//在实例中注册组件</span></span><br><span class="line">            <span class="string">'my-component'</span>: &#123;</span><br><span class="line">                   template: <span class="string">'&lt;div&gt;A custom component!&lt;/div&gt;'</span></span><br><span class="line">            &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用局部注册的组件只能在其所在实例中使用。<br>本例中使用局部注册的方式来注册组件。<br>为方便接下来的父子组件间通信的学习，将下拉列表块作为单独的子组件注册，整个选择输入框是它的父组件。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个vue实例</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#main'</span>,</span><br><span class="line">    components: &#123;<span class="comment">//注册父组件</span></span><br><span class="line">        <span class="string">'father-component'</span>: Father</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>html部分：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"main"</span>&gt;</span><br><span class="line">     &lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span>&gt;&lt;/father-component&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2、组件组合"><a href="#2、组件组合" class="headerlink" title="2、组件组合"></a>2、组件组合</h3><p>父子组件间的通信官方文档总结得很清楚：<br>在 Vue 中，父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息。</p>
+<h4 id="父组件通过prop将数据传递给子组件"><a href="#父组件通过prop将数据传递给子组件" class="headerlink" title="父组件通过prop将数据传递给子组件"></a>父组件通过prop将数据传递给子组件</h4><p>我们希望从外部将下拉列表的数据传给父组件，父组件再将它下发给子组件，使用prop完成这个过程。<br>首先在实例中定义city的值，并传入父组件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"main"</span>&gt;</span><br><span class="line">    &lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span> v-bind:list=<span class="string">"city"</span>&gt;&lt;/father-component&gt;&lt;!-- 绑定属性list的值为city --&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">            el: <span class="string">'#main'</span>,</span><br><span class="line">            components: &#123;</span><br><span class="line">                <span class="string">'father-component'</span>: Father</span><br><span class="line">            &#125;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                city:[<span class="string">"北京"</span>,<span class="string">"上海"</span>,<span class="string">"杭州"</span>,<span class="string">"广州"</span>]<span class="comment">//初始化city的值</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>父子组件中使用prop,父组件在使用子组件的地方绑定传入的列表值，子组件使用v-for将列表值显示出来:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    props:[<span class="string">'list'</span>],</span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这时我们只要改变外部定义的city的值，子组件中列表值也会改变。</p>
+<h4 id="子组件通过vue的自定义事件系统与父组件进行通信"><a href="#子组件通过vue的自定义事件系统与父组件进行通信" class="headerlink" title="子组件通过vue的自定义事件系统与父组件进行通信"></a>子组件通过vue的自定义事件系统与父组件进行通信</h4><p>我们想要实现点击子组件的列表项时，就将该列表项的值传到父组件输入框里，即改变父组件中定义的value的值（input已于value建立双向数据绑定）。<br>每个vue实例都实现了事件接口：</p>
+<ul>
+<li>使用 $on(eventName) 监听事件</li>
+<li>使用 $emit(eventName, optionalPayload) 触发事件<br>首先在注册子组件时，为每个列表项绑定一个点击事件childFun，在childFun中我们将触发父组件的tempFun事件，同时将列表项的值传过去。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'child-component'</span>: &#123;</span><br><span class="line">                    props:[<span class="string">'list'</span>],</span><br><span class="line">                    template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">                    methods:&#123;</span><br><span class="line">                        childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在父组件中监听tempFun事件是否被触发，一旦被触发将调用fatherFun方法更新value的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    props:[<span class="string">'list'</span>],</span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        fatherFun:<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.value = item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果：<br><img src="/img/4853241-c331ad96aeff4b79.png" alt="image.png"></p>
+<p><img src="/img/4853241-a2459e73f1a6b9e4.png" alt="image.png"><br>用同样的思路完善一下代码，实现：监听输入框的输入值，当手动输入值时将列表显现出来，将手动将输入值清空时列表自动隐藏；当输入框隐藏时，右边的三角形的尖角指向下，当输入框显现时，右边的三角形的尖角指向上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    value:<span class="string">""</span>,</span><br><span class="line">                    isShow:<span class="literal">false</span>,</span><br><span class="line">                    spanDownShow:<span class="literal">true</span>,</span><br><span class="line">                    spanUpShow:<span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down" v-on:click="showPanel"&gt;&lt;span class="up" v-show="spanUpShow"&gt;&lt;/span&gt;&lt;span class="down" v-show="spanDownShow"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun" v-show="isShow"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">            components:&#123;</span><br><span class="line">                <span class="string">'child-component'</span>: &#123;</span><br><span class="line">                    props:[<span class="string">'list'</span>],</span><br><span class="line">                    template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">                    methods:&#123;</span><br><span class="line">                        childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                fatherFun:<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.value = item;</span><br><span class="line">                &#125;,</span><br><span class="line">                showPanel:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.isShow = !<span class="keyword">this</span>.isShow;</span><br><span class="line">                    <span class="keyword">this</span>.spanDownShow = !<span class="keyword">this</span>.spanDownShow;</span><br><span class="line">                    <span class="keyword">this</span>.spanUpShow = !<span class="keyword">this</span>.spanUpShow;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            watch:&#123;</span><br><span class="line">                value:<span class="function"><span class="keyword">function</span>(<span class="params">newValue,oldValue</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(newValue === <span class="string">""</span>)&#123;</span><br><span class="line">                        <span class="keyword">this</span>.isShow = <span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanDownShow = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanUpShow = <span class="literal">false</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">this</span>.isShow = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanDownShow = <span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanUpShow = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">            el: <span class="string">'#main'</span>,</span><br><span class="line">            components: &#123;</span><br><span class="line">                <span class="string">'father-component'</span>: Father</span><br><span class="line">            &#125;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                city:[<span class="string">"北京"</span>,<span class="string">"上海"</span>,<span class="string">"杭州"</span>,<span class="string">"广州"</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、组件复用"><a href="#3、组件复用" class="headerlink" title="3、组件复用"></a>3、组件复用</h3><p>Vue 组件的 API 来自三部分——prop、事件和插槽：</p>
+<h4 id="prop允许外部环境传递数据给组件"><a href="#prop允许外部环境传递数据给组件" class="headerlink" title="prop允许外部环境传递数据给组件"></a>prop允许外部环境传递数据给组件</h4><p>当我们在vue实例中使用多个输入选择框组件时，可以通过传入不同的列表值使每个输入选择框的下拉列表值都不一样。<br><img src="https://upload-images.jianshu.io/upload_images/4853241-fb5a0fa91f401960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="事件允许从组件内触发外部环境的副作用"><a href="#事件允许从组件内触发外部环境的副作用" class="headerlink" title="事件允许从组件内触发外部环境的副作用"></a>事件允许从组件内触发外部环境的副作用</h4><p>同子组件触发父组件的事件，也可通过$emit从父组件内部触发外部环境的function。</p>
+<h4 id="插槽允许外部环境将额外的内容组合在组件中"><a href="#插槽允许外部环境将额外的内容组合在组件中" class="headerlink" title="插槽允许外部环境将额外的内容组合在组件中"></a>插槽允许外部环境将额外的内容组合在组件中</h4><p>使用<slot>接口分发内容，最初在<slot>中的内容为备用内容，当没有内容被插入时才显示备用内容。<br>示例：<br>我们使用父组件时想加上一段话：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span> v-bind:list=<span class="string">"city"</span>&gt;</span><br><span class="line">       &lt;p&gt;使用插槽&lt;<span class="regexp">/p&gt;   </span></span><br><span class="line"><span class="regexp">&lt;/</span>father-component&gt;</span><br></pre></td></tr></table></figure></slot></slot></p>
+<p>父组件的template改为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;slot&gt;没有内容哦&lt;/slot&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down" v-on:click="showPanel"&gt;&lt;span class="up" v-show="spanUpShow"&gt;&lt;/span&gt;&lt;span class="down" v-show="spanDownShow"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun" v-show="isShow"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span></span><br></pre></td></tr></table></figure></p>
+<p>页面渲染结果是：<br><img src="https://upload-images.jianshu.io/upload_images/4853241-ad51082272b5baef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>父子组件间的插槽使用同上。更多插槽相关知识请查看官方文档。<br>demo源码地址：<a href="https://github.com/Lizer1995/v" target="_blank" rel="noopener">https://github.com/Lizer1995/v</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/js控制滚动条滚动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/15/js控制滚动条滚动/" itemprop="url">js控制滚动条滚动</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T22:12:10+08:00">
+                2018-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>js主要通过4个属性来控制滚动条：<br>scrollHeight: 获取对象可滚动的高度。<br>scrollLeft:获取或设置对象已横向滚动的距离（距左端）。<br>scrollTop:获取或设置对象已纵向滚动的距离。<br>scrollWidth:获取对象可滚动的宽度.</p>
+<p>例子：<br>写一个定时器，每隔5秒钟滚动条向下滚动对象可视区域的高度，若滚动到了底部，则自动回到顶端。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            #main&#123;</span><br><span class="line">                height:<span class="number">500</span>px;</span><br><span class="line">                overflow-y:scroll;</span><br><span class="line">            &#125;</span><br><span class="line">            #div&#123;</span><br><span class="line">            	height:<span class="number">2000</span>px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div id=<span class="string">"main"</span>&gt;</span><br><span class="line">            &lt;div id=<span class="string">"div"</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> hScrollTop = <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>).scrollTop; </span><br><span class="line">                <span class="keyword">var</span> hScrollHeight = <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>).scrollHeight;</span><br><span class="line">                <span class="keyword">var</span> height = <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>).offsetHeight;</span><br><span class="line">                <span class="built_in">console</span>.log(hScrollTop+<span class="string">" "</span>+hScrollHeight+<span class="string">" "</span>+height);</span><br><span class="line">                <span class="keyword">if</span>((height+hScrollTop)&gt;=hScrollHeight)&#123;<span class="comment">//滚动条已经到了容器底部</span></span><br><span class="line">                    <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>).scrollTop=<span class="number">0</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                	<span class="keyword">var</span> h = hScrollTop + height;</span><br><span class="line">                	<span class="built_in">document</span>.getElementById(<span class="string">'main'</span>).scrollTop=h;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,<span class="number">5000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Less学习总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/01/Less学习总结/" itemprop="url">Less学习总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T11:17:01+08:00">
+                2018-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、Less是什么"><a href="#1、Less是什么" class="headerlink" title="1、Less是什么"></a>1、Less是什么</h3><h4 id="Less类似于jQuery。"><a href="#Less类似于jQuery。" class="headerlink" title="Less类似于jQuery。"></a>Less类似于jQuery。</h4><p>——是一种css动态语言，属于css预处理语言的一种。它使用类似css的语法，为css赋予动态语言的特性，如变量、继承、函数、运算等，更方便css的维护与编写。</p>
+<h3 id="2、注释"><a href="#2、注释" class="headerlink" title="2、注释"></a>2、注释</h3><p>/**/ ：编译时保留，编译后的css文件中也能看到注释<br>//：编译时忽略，编译后的css文件中看不到</p>
+<h3 id="3、定义变量"><a href="#3、定义变量" class="headerlink" title="3、定义变量"></a>3、定义变量</h3><p>用符号@来定义变量</p>
+<ul>
+<li>例<br>定义：<br><code>@width:300px;</code><br>使用：<br><code>.box{width:@width;}</code></li>
+</ul>
+<h3 id="4、混合"><a href="#4、混合" class="headerlink" title="4、混合"></a>4、混合</h3><h4 id="编写可重用样式"><a href="#编写可重用样式" class="headerlink" title="编写可重用样式"></a>编写可重用样式</h4><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.border&#123;</span><br><span class="line">      border:solid 5px #fff;</span><br><span class="line">&#125;</span><br><span class="line">.box&#123;</span><br><span class="line">      .border;</span><br><span class="line">      margin:<span class="number">10</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5、带参数的混合"><a href="#5、带参数的混合" class="headerlink" title="5、带参数的混合"></a>5、带参数的混合</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.border(@border_width)&#123;</span><br><span class="line">      border:solid @border_width #fff;</span><br><span class="line">&#125;</span><br><span class="line">.test&#123;</span><br><span class="line">     .border(<span class="number">30</span>px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="6、带默认值的混合"><a href="#6、带默认值的混合" class="headerlink" title="6、带默认值的混合"></a>6、带默认值的混合</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.border(@border_width:<span class="number">30</span>px)&#123;</span><br><span class="line">      border:solid @border_width #fff;</span><br><span class="line">&#125;</span><br><span class="line">.test&#123;</span><br><span class="line">     .border();<span class="comment">/*不报错，默认传入30px,若传入参数，则参数覆盖默认值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="7、匹配模式"><a href="#7、匹配模式" class="headerlink" title="7、匹配模式"></a>7、匹配模式</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.position(r)&#123;</span><br><span class="line">     position:relative;<span class="comment">/*相对定位*/</span></span><br><span class="line">&#125;</span><br><span class="line">.position(a)&#123;</span><br><span class="line">     position:absolute;<span class="comment">/*绝对定位*/</span></span><br><span class="line">&#125;</span><br><span class="line">.position(f)&#123;</span><br><span class="line">     position:fixed;<span class="comment">/*静止*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.test&#123;</span><br><span class="line">    .postion(a);<span class="comment">/*使用绝对定位*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="8、运算"><a href="#8、运算" class="headerlink" title="8、运算"></a>8、运算</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@width:<span class="number">300</span>px;</span><br><span class="line">.box&#123;<span class="attr">width</span>:@width+<span class="number">20</span>px;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9、嵌套"><a href="#9、嵌套" class="headerlink" title="9、嵌套"></a>9、嵌套</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">li&#123;</span><br><span class="line">    a&#123;</span><br><span class="line">         color:#ff0000;</span><br><span class="line">         &amp;:hover&#123;#color:#0000ff;&#125;/*&amp;代表它的上一层选择器*/</span><br><span class="line">    &#125;</span><br><span class="line">    span:&#123;color:#00ff00&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>相当于：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li a&#123;color:#ff0000;&#125;</span><br><span class="line">li a:hover&#123;color:#0000ff;&#125;</span><br><span class="line">li span&#123;color:#00ff00&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="10、-arguments变量"><a href="#10、-arguments变量" class="headerlink" title="10、@arguments变量"></a>10、@arguments变量</h3><p><code>@arguments</code>包含了传进来的所有参数。<br>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.test_border(@color:#fff,@so:solid,@width:30px)&#123;</span><br><span class="line">      border:@<span class="built_in">arguments</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="11、避免编译"><a href="#11、避免编译" class="headerlink" title="11、避免编译"></a>11、避免编译</h3><p>语法：<code>~&#39;&#39;</code></p>
+<p>######更多语法可查阅less官网。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/CSS让背景图片居中显示的方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/12/CSS让背景图片居中显示的方法/" itemprop="url">css让背景图片居中显示的方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T20:31:11+08:00">
+                2017-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>当我们的背景图片写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p>时，表示背景图片不重复，位置会默认为在div中居于左上角。<br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  </span><br><span class="line">    &lt;head&gt;  </span><br><span class="line">        &lt;meta charset=&quot;utf-8&quot; /&gt;  </span><br><span class="line">        &lt;title&gt;&lt;/title&gt;  </span><br><span class="line">        &lt;style type=&quot;text/css&quot;&gt;  </span><br><span class="line">            #header &#123;  </span><br><span class="line">                width: 100%;  </span><br><span class="line">                height: 400px;  </span><br><span class="line">                border: 1px solid;  </span><br><span class="line">                background: url(&quot;images/titleborder.png&quot;) no-repeat;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &lt;/style&gt;    </span><br><span class="line">    &lt;/head&gt;  </span><br><span class="line">    &lt;body&gt;  </span><br><span class="line">        &lt;div id=&quot;header&quot;&gt;  </span><br><span class="line">              </span><br><span class="line">        &lt;/div&gt;  </span><br><span class="line">    &lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<p><img src="/img/4853241-7efa092bc1b6916e.png" alt="1.png"></p>
+<p>如果背景图片写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center center no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p>效果是水平垂直居中对齐：</p>
+<p><img src="/img/4853241-38a439354e0eeba7.png" alt="2.png"><br>第一个center表示水平居中，第二个center表示垂直居中。<br>要令背景图片水平居中，并贴近div顶部，代码可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center 0 no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p>或者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center top no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<p><img src="/img/4853241-69e740d38d342d23.png" alt="image.png"></p>
+<p>令背景图片居于右上角的写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) right top no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<p><img src="/img/4853241-11026cf9df09c476.png" alt="image.png"></p>
+<p>左居中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) left center no-repeat;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/4853241-42c979901412a471.png" alt="image.png"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/21/js数组去重/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/21/js数组去重/" itemprop="url">js数组去重、对象数组去重</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T23:17:00+08:00">
+                2017-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1、普通数组去重"><a href="#1、普通数组去重" class="headerlink" title="1、普通数组去重"></a>1、普通数组去重</h3><h4 id="普通数组去重"><a href="#普通数组去重" class="headerlink" title="普通数组去重"></a>普通数组去重</h4><h5 id="方法一：遍历数组法"><a href="#方法一：遍历数组法" class="headerlink" title="方法一：遍历数组法"></a>方法一：遍历数组法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    <span class="comment">//遍历当前数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        <span class="comment">//判断array[i]是否在临时数组中，不在则将array[i]的值复制到temp里</span></span><br><span class="line">        <span class="comment">//indexOf()方法可返回某个指定的字符串或数组值在字符串或数组中首次出现的位置，若不在其中则返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (temp.indexOf(array[i]) === <span class="number">-1</span>)</span><br><span class="line">            temp.push(array[i]); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二：排序法"><a href="#方法二：排序法" class="headerlink" title="方法二：排序法"></a>方法二：排序法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    array.sort();<span class="comment">//先给当前数组排序</span></span><br><span class="line">    temp.push(array[<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">//因为数组已经经过排序，所以重复元素一定相邻，判断当前数组第i个元素与temp的最后一个元素是否相等，不相等时才复制元素</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(array[i] != temp[temp.length<span class="number">-1</span>])</span><br><span class="line">            temp.push(array[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法三：对象法"><a href="#方法三：对象法" class="headerlink" title="方法三：对象法"></a>方法三：对象法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func3</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    <span class="keyword">var</span> json = &#123;&#125;;<span class="comment">//创建一个空对象</span></span><br><span class="line">    <span class="comment">//将当前数组的元素值当作对象的属性，遍历数组，比对对象，如果对象的这个属性不存在则将当前数组元素复制到临时数组，并添加该属性且将属性值赋值为1</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;array.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!json[array[i]])&#123;<span class="comment">//如果对象没有该属性</span></span><br><span class="line">            temp.push(array[i]);</span><br><span class="line">            json[array[i]] = <span class="number">1</span>;<span class="comment">//添加属性，将属性值赋值为1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2、对象数组去重"><a href="#2、对象数组去重" class="headerlink" title="2、对象数组去重"></a>2、对象数组去重</h3><h5 id="方法一：将对象数组中name属性相同的项去重"><a href="#方法一：将对象数组中name属性相同的项去重" class="headerlink" title="方法一：将对象数组中name属性相同的项去重"></a>方法一：将对象数组中name属性相同的项去重</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func4</span>(<span class="params">objArray</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = [];<span class="comment">//去重后返回的结果数组</span></span><br><span class="line">    <span class="keyword">var</span> temp = &#123;&#125;;<span class="comment">//临时对象</span></span><br><span class="line">    <span class="comment">//将对象数组中每一项的name值作为属性，若temp不拥有此属性时则为temp添加此属性且将其值赋为true，并将这一项push到结果数组中</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;objArray.length;i++)&#123;  </span><br><span class="line">        <span class="keyword">var</span> myname = objArray[i].name;</span><br><span class="line">        <span class="keyword">if</span>(temp[myname])&#123;<span class="comment">//如果temp中已经存在此属性名，则说明遇到重复项</span></span><br><span class="line">            <span class="keyword">continue</span>;<span class="comment">//不继续执行接下来的代码，跳转至循环开头</span></span><br><span class="line">        &#125;  </span><br><span class="line">        temp[myname] = <span class="literal">true</span>;<span class="comment">//为temp添加此属性（myname）且将其值赋为true</span></span><br><span class="line">        result.push(objArray[i]);<span class="comment">//将这一项复制到结果数组result中去</span></span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> result;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二：使用reduce方法将对象数组中name属性相同的项去重"><a href="#方法二：使用reduce方法将对象数组中name属性相同的项去重" class="headerlink" title="方法二：使用reduce方法将对象数组中name属性相同的项去重"></a>方法二：使用reduce方法将对象数组中name属性相同的项去重</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func5</span>(<span class="params">objArray</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> hash = &#123;&#125;; </span><br><span class="line">    <span class="comment">//reduce方法有两个参数，第一个参数是一个callback，用于针对数组项的操作；第二个参数则是传入的初始值，这个初始值用于单个数组项的操作。</span></span><br><span class="line">    objArray = objArray.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">item, next</span>) </span>&#123;<span class="comment">//这是针对数组项操作的函数，对于每个数组项，reduce方法都会将其调用一次</span></span><br><span class="line">        <span class="comment">//可使用最多四个参数来声明回调函数（第一个参数：通过上一次调用回调函数获得的值;第二个参数：当前数组元素的值；第三个参数：当前数组元素的数字索引；第四个参数：包含该元素的数组对象）</span></span><br><span class="line">        <span class="comment">//这里只使用了两个参数，所以item和next分别代表上一次调用回调函数后的值和objArray项值</span></span><br><span class="line">        hash[next.name]?<span class="string">''</span>:hash[next.name]=<span class="literal">true</span>&amp;&amp;item.push(next);<span class="comment">//与func3逻辑相似 </span></span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;, []);<span class="comment">//初始值是一个空对象，使用reduce方法返回的是空对象通过叠加执行之后的结果</span></span><br><span class="line">    <span class="keyword">return</span> objArray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、代码汇总与执行"><a href="#3、代码汇总与执行" class="headerlink" title="3、代码汇总与执行"></a>3、代码汇总与执行</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">(function()&#123;</span></span><br><span class="line"><span class="string">    array = [1,2,3,3,3];//测试数组</span></span><br><span class="line"><span class="string">    objArray = [&#123;age:1,name:'a'&#125;,&#123;age:2,name:'a'&#125;,&#123;age:3,name:'c'&#125;];//测试对象数组</span></span><br><span class="line"><span class="string">    console.log(func1(array));//遍历数组法</span></span><br><span class="line"><span class="string">    console.log(func2(array));//排序法</span></span><br><span class="line"><span class="string">    console.log(func3(array));//对象法</span></span><br><span class="line"><span class="string">    console.log(func4(objArray));//将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">    console.log(func5(objArray));//使用数组内置的reduce方法将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">&#125;)()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//遍历数组法</span></span><br><span class="line"><span class="string">function func1(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    //遍历当前数组</span></span><br><span class="line"><span class="string">    for(var i=0;i&lt;array.length;i++)&#123;</span></span><br><span class="line"><span class="string">        //判断array[i]是否在临时数组中，不在则将array[i]的值复制到temp里</span></span><br><span class="line"><span class="string">        //indexOf()方法可返回某个指定的字符串或数组值在字符串或数组中首次出现的位置，若不在其中则返回-1</span></span><br><span class="line"><span class="string">        if (temp.indexOf(array[i]) === -1)</span></span><br><span class="line"><span class="string">            temp.push(array[i]); </span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//排序法</span></span><br><span class="line"><span class="string">function func2(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    array.sort();//先给当前数组排序</span></span><br><span class="line"><span class="string">    temp.push(array[0]);</span></span><br><span class="line"><span class="string">    //因为数组已经经过排序，所以重复元素一定相邻，判断当前数组第i个元素与temp的最后一个元素是否相等，不相等时才复制元素</span></span><br><span class="line"><span class="string">    for(var i=1;i&lt;array.length;i++)&#123;</span></span><br><span class="line"><span class="string">        if(array[i] != temp[temp.length-1])</span></span><br><span class="line"><span class="string">            temp.push(array[i]);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//对象法</span></span><br><span class="line"><span class="string">function func3(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    var json = &#123;&#125;;//创建一个空对象</span></span><br><span class="line"><span class="string">    //将当前数组的元素值当作对象的属性，遍历数组，比对对象，如果对象的这个属性不存在则将当前数组元素复制到临时数组，并添加该属性且将属性值赋值为1</span></span><br><span class="line"><span class="string">    for(var i = 0; i&lt;array.length; i++)&#123;</span></span><br><span class="line"><span class="string">        if(!json[array[i]])&#123;//如果对象没有该属性</span></span><br><span class="line"><span class="string">            temp.push(array[i]);</span></span><br><span class="line"><span class="string">            json[array[i]] = 1;//添加属性，将属性值赋值为1</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">function func4(objArray) &#123;</span></span><br><span class="line"><span class="string">    var result = [];//去重后返回的结果数组</span></span><br><span class="line"><span class="string">    var temp = &#123;&#125;;//临时对象</span></span><br><span class="line"><span class="string">    //将对象数组中每一项的name值作为属性，若temp不拥有此属性时则为temp添加此属性且将其值赋为true，并将这一项push到结果数组中</span></span><br><span class="line"><span class="string">    for(var i=0;i&lt;objArray.length;i++)&#123;  </span></span><br><span class="line"><span class="string">        var myname = objArray[i].name;</span></span><br><span class="line"><span class="string">        if(temp[myname])&#123;//如果temp中已经存在此属性名，则说明遇到重复项</span></span><br><span class="line"><span class="string">            continue;//不继续执行接下来的代码，跳转至循环开头</span></span><br><span class="line"><span class="string">        &#125;  </span></span><br><span class="line"><span class="string">        temp[myname] = true;//为temp添加此属性（myname）且将其值赋为true</span></span><br><span class="line"><span class="string">        result.push(objArray[i]);//将这一项复制到结果数组result中去</span></span><br><span class="line"><span class="string">    &#125;  </span></span><br><span class="line"><span class="string">    return result;  </span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//使用reduce方法将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">function func5(objArray)&#123;</span></span><br><span class="line"><span class="string">    var hash = &#123;&#125;; </span></span><br><span class="line"><span class="string">    //reduce方法有两个参数，第一个参数是一个callback，用于针对数组项的操作；第二个参数则是传入的初始值，这个初始值用于单个数组项的操作。</span></span><br><span class="line"><span class="string">    objArray = objArray.reduce(function(item, next) &#123;//这是针对数组项操作的函数，对于每个数组项，reduce方法都会将其调用一次</span></span><br><span class="line"><span class="string">        //可使用最多四个参数来声明回调函数（第一个参数：通过上一次调用回调函数获得的值;第二个参数：当前数组元素的值；第三个参数：当前数组元素的数字索引；第四个参数：包含该元素的数组对象）</span></span><br><span class="line"><span class="string">        //这里只使用了两个参数，所以item和next分别代表上一次调用回调函数后的值和objArray项值</span></span><br><span class="line"><span class="string">        hash[next.name]?'':hash[next.name]=true&amp;&amp;item.push(next);//与func3逻辑相似 </span></span><br><span class="line"><span class="string">        return item;</span></span><br><span class="line"><span class="string">    &#125;, []);//初始值是一个空对象，使用reduce方法返回的是空对象通过叠加执行之后的结果</span></span><br><span class="line"><span class="string">    return objArray;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/jquery复选框/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/12/jquery复选框/" itemprop="url">jQuery操作复选框选中状态，prop()和attr()的区别和使用方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T20:39:14+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天写代码遇到一个小小的问题，情况是这样的：我的页面中有两个复选框，我想实现选中一个复选框的同时另一个复选框也被选中，取消选中时亦然。一开始我用的是attr()和removeAttr()的方法，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> /&gt;</span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox2"</span> /&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="string">"#checkbox1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox1'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).attr(<span class="string">"checked"</span>,<span class="string">'check'</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).removeAttr(<span class="string">"checked"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    $(<span class="string">"#checkbox2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox2'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).attr(<span class="string">"checked"</span>,<span class="string">'check'</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).removeAttr(<span class="string">"checked"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>后来发现这个方法不行，会有Bug：第一次我选中复选框A，复选框B可以同时自动被选中，取消选中复选框A复选框B也同时取消，好，到这里是没问题的；但如果我这样选择：选中复选框A，复选框B同时自动选中，再点击复选框B来取消选中两个复选框，就没有用了，以后再怎么选中A或选中B，另一个都不为所动。<br>然后我试着换了个方法，使用prop()来替代attr()，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> /&gt;</span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox2"</span> /&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="string">"#checkbox1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox1'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    $(<span class="string">"#checkbox2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox2'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>完全没问题，无论什么时候A与B的选中状态都是同步的：</p>
+<p><img src="/img/4853241-885d46e82a739b3b.png" alt="image.png"></p>
+<p><img src="/img/4853241-407375939f788682.png" alt="image.png"><br>这是什么原因呢？到网上查了一下，原理是这样的：<br>“attr”是”attribute”的缩写，表示HTML文档节点的属性，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"mycheckbox"</span>  checked=<span class="string">"checked"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这里面id、class、checked都是input（HTML文档节点）的属性；”prop”是”property”的缩写，表示JS对象的属性，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student = &#123;<span class="attr">name</span>:<span class="string">"张三"</span>,<span class="attr">age</span>:<span class="string">"18"</span>,<span class="attr">id</span>:<span class="string">"001"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里面name、age、id都是student（JS对象）的属性。<br>在jQuery 1.6之前，只有attr()方法没有prop()方法，1.6及之后的版本增加了prop()方法，所以使用1.6及之后版本的jQuery，操作文档节点的属性和JS对象的属性需要分别使用其对应的方法。<br>jQuery认为：attribute的checked、selected、disabled表示的是标签初始状态的值，所以我在使用<code>attr(&quot;checked&quot;,&#39;check&#39;)</code>方法时，仅仅是为<code>input</code>增加了一个checked的属性，即只设定了该复选框的初始状态为选中状态，而没有改变该复选框的实时选中状态，所以会出现上述Bug。只有property的值才能表示该对象的实时属性，故在我这种情况下使用<code>prop(&quot;checked&quot;,true)</code>才是正确的。<br>最后记录几个使用attr()和prop()时的细节问题：</p>
+<ul>
+<li>对于表单元素的checked、selected、disabled等属性，在jQuery 1.6之前，attr()获取这些属性的返回值为Boolean类型，如果被选中(或禁用)就返回true，否则返回false。但是从1.6开始，使用attr()获取这些属性的返回值为String类型，如果被选中(或禁用)就返回”checked”、”selected”或”disabled”，如果不需要这个属性了，应使用removeAttr()将其移除。</li>
+<li>1.6及之后请使用prop()来设定表单的实时状态（如：checked、selected、disabled），值为true或false。</li>
+<li>1.6及之后attr()设置的值只能是String型的，而prop()设置的值可以是任意数据类型。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/AngularJS学习笔记（七）服务/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/12/AngularJS学习笔记（七）服务/" itemprop="url">AngularJS学习笔记（七）服务</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T10:42:00+08:00">
+                2017-10-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>出于内存占用和性能的考虑，控制器只会在需要时被实例化，并且不再需要就会被销毁。这意味着每次切换路由或者重新加载视图时，控制器只会在需要时被实例化，并且不再需要就会被销毁。这意味着每次切换路由或重新加载视图时，当前的控制器会被AngularJS清除掉。</p>
+<p>服务提供了一种能够在应用的整个生命周期内保持数据的方法，它能够在控制器之间进行通信，并且能保证数据的一致性。</p>
+<p>  AngularJS中可以创建自己的服务，也可以使用内置的服务。</p>
+<h4 id="AngularJS的五种创建模式：value、constant、factory、service、provider。"><a href="#AngularJS的五种创建模式：value、constant、factory、service、provider。" class="headerlink" title="AngularJS的五种创建模式：value、constant、factory、service、provider。"></a>AngularJS的五种创建模式：value、constant、factory、service、provider。</h4><h6 id="value"><a href="#value" class="headerlink" title="value()"></a>value()</h6><ul>
+<li>变量<br>此方法接收两个参数：</li>
+<li>name（字符串）：需要注册的服务名</li>
+<li>value（值）：将这个值作为可注入的实例返回<h6 id="constant"><a href="#constant" class="headerlink" title="constant()"></a>constant()</h6></li>
+<li>常量<br>可以将一个已经存在的变量值注册为服务，并将其注入到应用的其他部分当中。例如，假设我们需要给后端服务一个apiKey，可以用constant()将其当做常量保存下来。<br>此方法接收两个参数：</li>
+<li>name（字符串）：需要注册的服务名</li>
+<li>value（值）：将这个值作为可注入的实例返回<br><em>constant()的值不可被改变</em><h6 id="factory"><a href="#factory" class="headerlink" title="factory()"></a>factory()</h6></li>
+<li>最常用<br>接收两个参数：</li>
+<li>name（字符串）：需要注册的服务名。</li>
+<li>getFn（函数）：会在AngularJS创建服务实例时被调用。<h6 id="service"><a href="#service" class="headerlink" title="service()"></a>service()</h6>注册一个支持构造函数的服务，它允许我们为服务注册一个构造函数。<br>接受两个参数：</li>
+<li>name（字符串）：要注册的服务名称。</li>
+<li>constructor（函数）：构造函数，调用它来实例化对象。</li>
+</ul>
+<h3 id="服务的应用"><a href="#服务的应用" class="headerlink" title="服务的应用"></a>服务的应用</h3><ul>
+<li>在多个控制器中调用服务。</li>
+<li>代码示例：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div ng-app=<span class="string">"myApp"</span>&gt;</span><br><span class="line">   &lt;div ng-controller=<span class="string">"FCtrl"</span>&gt;</span><br><span class="line">    &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data.msg"</span>&gt;</span><br><span class="line">    &#123;&#123;data.msg&#125;&#125;</span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div ng-controller="SCtrl"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;input type="text" ng-model="data.msg"&gt;</span></span><br><span class="line"><span class="regexp">        &#123;&#123;data.msg&#125;&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, []);</span><br><span class="line">    app.factory(<span class="string">'Data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;<span class="attr">msg</span>:<span class="string">"我来自factory"</span>&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    app.controller(<span class="string">'FCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope,Data</span>) </span>&#123;</span><br><span class="line">        $scope.data = Data;</span><br><span class="line">    &#125;);</span><br><span class="line">    app.controller(<span class="string">'SCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope,Data</span>) </span>&#123;</span><br><span class="line">        $scope.data = Data;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以看到，我们使用了两个控制器，两个控制器的数据来源都来自Data，所以这段代码的运行结果是两个表单数据，改变一个时另一个也会同时改变。</p>
+<ul>
+<li>效果：</li>
+</ul>
+<p><img src="/img/4853241-c8db37771abef520.png" alt="image.png"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lizer</p>
+              <p class="site-description motion-element" itemprop="description">前端，WEB开发，阅读</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lizer</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
