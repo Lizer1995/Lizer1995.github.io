@@ -286,6 +286,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/Vue双向数据绑定原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/31/Vue双向数据绑定原理/" itemprop="url">Vue双向数据绑定原理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-31T15:54:32+08:00">
+                2018-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是双向数据绑定？"><a href="#什么是双向数据绑定？" class="headerlink" title="什么是双向数据绑定？"></a>什么是双向数据绑定？</h3><p>Vue是个MVVM框架，当数据发生变化时，视图也跟着发生变化，当视图发生变化时，数据也会跟着同步变化。双向数据绑定，一般是对于UI控件来说的，非UI控件不会涉及到双向数据绑定。</p>
+<h3 id="Vue双向数据绑定是怎么实现的？"><a href="#Vue双向数据绑定是怎么实现的？" class="headerlink" title="Vue双向数据绑定是怎么实现的？"></a>Vue双向数据绑定是怎么实现的？</h3><p>官方文档上说得很简单——用v-model指令在表单元素上创建双向数据绑定。<br><img src="/img/4853241-2603e4de31f5caa8.png" alt="屏幕快照 2018-05-31 上午7.43.43.png"><br>那么，v-model背后的实现原理又是什么呢？<br>它的基本原理是利用Object.defineProperty()这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的。<br>使用Object.defineProperty()实现一个简单的双向数据绑定小例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp">    &lt;body&gt;</span></span><br><span class="line"><span class="regexp">        &lt;input id="text" type="text" /</span>&gt;</span><br><span class="line">        &lt;p id=<span class="string">"p"</span>&gt;&lt;/p&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        var obj = &#123;&#125;;</span></span><br><span class="line"><span class="string">        Object.defineProperty(obj,"</span>name<span class="string">",&#123;</span></span><br><span class="line"><span class="string">          	get:function()&#123;</span></span><br><span class="line"><span class="string">          	    return name;</span></span><br><span class="line"><span class="string">          	&#125;,</span></span><br><span class="line"><span class="string">          	set:function(value)&#123;</span></span><br><span class="line"><span class="string">          	    document.getElementById("</span>text<span class="string">").value = value;</span></span><br><span class="line"><span class="string">          	    document.getElementById("</span>p<span class="string">").innerHTML = value;</span></span><br><span class="line"><span class="string">          	&#125;</span></span><br><span class="line"><span class="string">        &#125;);</span></span><br><span class="line"><span class="string">        var input = document.getElementById("</span>text<span class="string">");</span></span><br><span class="line"><span class="string">        input.addEventListener("</span>input<span class="string">",function(event)&#123;</span></span><br><span class="line"><span class="string">        	var text = event.target.value;</span></span><br><span class="line"><span class="string">        	obj.name = text;</span></span><br><span class="line"><span class="string">        &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>效果：<br><img src="/img/4853241-62d418e7c6b63d61.png" alt="屏幕快照 2018-05-31 上午10.59.20.png"></p>
+<p>可以看到，我们在输入框输入内容时，</p><p>标签内会显示对应的内容，这说明实现了model=&gt;view的绑定。<br>现在我们在控制台给obj.name赋值，发现赋值后输入框的内容变成了所赋的那个值：<br><img src="/img/4853241-c10016a469102e0a.png" alt="屏幕快照 2018-05-31 上午11.00.57.png"></p>
+<p>说明实现了view=&gt;model的绑定。</p>
+<p>当然vue的实现比这复杂得多，详细请查看网上大牛们的博客。</p>
+<p>这种实现双向数据绑定的方法叫作数据劫持结合发布者-订阅者模式。</p>
+<p>简单解释什么是数据劫持结合发布者-订阅者模式：<br>1、数据劫持：在本例中，通过Object.defineProperty来劫持name属性的setter，getter，在数据变化时通知订阅者，触发相应的回调；<br>2、发布者/订阅者：订阅者可定义为希望接收到通知的对象；发布者可定义为激活事件的对象。在本例中，文本输入框相当于一个订阅者，Obj相当于一个发布者。文本框通过addEventListener接收Obj给它的启动通知，触发相应的函数，进行视图更新。</p>
+<p>一般来说，实际应用中会涉及多个订阅者，这时就需要一个消息订阅器来管理这些订阅者；另外还需要指令来初始化订阅者。<br>详情及更复杂的例子可参考这篇博文：<br><a href="http://www.cnblogs.com/libin-1/p/6893712.html" target="_blank" rel="noopener">http://www.cnblogs.com/libin-1/p/6893712.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/Mac下更新npm报错/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1647,173 +1797,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/AngularJS学习笔记（七）服务/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/12/AngularJS学习笔记（七）服务/" itemprop="url">AngularJS学习笔记（七）服务</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T10:42:00+08:00">
-                2017-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>出于内存占用和性能的考虑，控制器只会在需要时被实例化，并且不再需要就会被销毁。这意味着每次切换路由或者重新加载视图时，控制器只会在需要时被实例化，并且不再需要就会被销毁。这意味着每次切换路由或重新加载视图时，当前的控制器会被AngularJS清除掉。</p>
-<p>服务提供了一种能够在应用的整个生命周期内保持数据的方法，它能够在控制器之间进行通信，并且能保证数据的一致性。</p>
-<p>  AngularJS中可以创建自己的服务，也可以使用内置的服务。</p>
-<h4 id="AngularJS的五种创建模式：value、constant、factory、service、provider。"><a href="#AngularJS的五种创建模式：value、constant、factory、service、provider。" class="headerlink" title="AngularJS的五种创建模式：value、constant、factory、service、provider。"></a>AngularJS的五种创建模式：value、constant、factory、service、provider。</h4><h6 id="value"><a href="#value" class="headerlink" title="value()"></a>value()</h6><ul>
-<li>变量<br>此方法接收两个参数：</li>
-<li>name（字符串）：需要注册的服务名</li>
-<li>value（值）：将这个值作为可注入的实例返回<h6 id="constant"><a href="#constant" class="headerlink" title="constant()"></a>constant()</h6></li>
-<li>常量<br>可以将一个已经存在的变量值注册为服务，并将其注入到应用的其他部分当中。例如，假设我们需要给后端服务一个apiKey，可以用constant()将其当做常量保存下来。<br>此方法接收两个参数：</li>
-<li>name（字符串）：需要注册的服务名</li>
-<li>value（值）：将这个值作为可注入的实例返回<br><em>constant()的值不可被改变</em><h6 id="factory"><a href="#factory" class="headerlink" title="factory()"></a>factory()</h6></li>
-<li>最常用<br>接收两个参数：</li>
-<li>name（字符串）：需要注册的服务名。</li>
-<li>getFn（函数）：会在AngularJS创建服务实例时被调用。<h6 id="service"><a href="#service" class="headerlink" title="service()"></a>service()</h6>注册一个支持构造函数的服务，它允许我们为服务注册一个构造函数。<br>接受两个参数：</li>
-<li>name（字符串）：要注册的服务名称。</li>
-<li>constructor（函数）：构造函数，调用它来实例化对象。</li>
-</ul>
-<h3 id="服务的应用"><a href="#服务的应用" class="headerlink" title="服务的应用"></a>服务的应用</h3><ul>
-<li>在多个控制器中调用服务。</li>
-<li>代码示例：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div ng-app=<span class="string">"myApp"</span>&gt;</span><br><span class="line">   &lt;div ng-controller=<span class="string">"FCtrl"</span>&gt;</span><br><span class="line">    &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data.msg"</span>&gt;</span><br><span class="line">    &#123;&#123;data.msg&#125;&#125;</span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div ng-controller="SCtrl"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;input type="text" ng-model="data.msg"&gt;</span></span><br><span class="line"><span class="regexp">        &#123;&#123;data.msg&#125;&#125;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, []);</span><br><span class="line">    app.factory(<span class="string">'Data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;<span class="attr">msg</span>:<span class="string">"我来自factory"</span>&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    app.controller(<span class="string">'FCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope,Data</span>) </span>&#123;</span><br><span class="line">        $scope.data = Data;</span><br><span class="line">    &#125;);</span><br><span class="line">    app.controller(<span class="string">'SCtrl'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope,Data</span>) </span>&#123;</span><br><span class="line">        $scope.data = Data;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可以看到，我们使用了两个控制器，两个控制器的数据来源都来自Data，所以这段代码的运行结果是两个表单数据，改变一个时另一个也会同时改变。</p>
-<ul>
-<li>效果：</li>
-</ul>
-<p><img src="/img/4853241-c8db37771abef520.png" alt="image.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1864,7 +1847,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

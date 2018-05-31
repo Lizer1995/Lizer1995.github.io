@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vue双向数据绑定原理]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[什么是双向数据绑定？Vue是个MVVM框架，当数据发生变化时，视图也跟着发生变化，当视图发生变化时，数据也会跟着同步变化。双向数据绑定，一般是对于UI控件来说的，非UI控件不会涉及到双向数据绑定。 Vue双向数据绑定是怎么实现的？官方文档上说得很简单——用v-model指令在表单元素上创建双向数据绑定。那么，v-model背后的实现原理又是什么呢？它的基本原理是利用Object.defineProperty()这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的。使用Object.defineProperty()实现一个简单的双向数据绑定小例子：123456789101112131415161718192021222324252627&lt;!doctype html&gt;&lt;html&gt; &lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input id="text" type="text" /&gt; &lt;p id="p"&gt;&lt;/p&gt; &lt;/body&gt; &lt;script type="text/javascript"&gt; var obj = &#123;&#125;; Object.defineProperty(obj,"name",&#123; get:function()&#123; return name; &#125;, set:function(value)&#123; document.getElementById("text").value = value; document.getElementById("p").innerHTML = value; &#125; &#125;); var input = document.getElementById("text"); input.addEventListener("input",function(event)&#123; var text = event.target.value; obj.name = text; &#125;); &lt;/script&gt;&lt;/html&gt; 效果： 可以看到，我们在输入框输入内容时，标签内会显示对应的内容，这说明实现了model=&gt;view的绑定。现在我们在控制台给obj.name赋值，发现赋值后输入框的内容变成了所赋的那个值： 说明实现了view=&gt;model的绑定。 当然vue的实现比这复杂得多，详细请查看网上大牛们的博客。 这种实现双向数据绑定的方法叫作数据劫持结合发布者-订阅者模式。 简单解释什么是数据劫持结合发布者-订阅者模式：1、数据劫持：在本例中，通过Object.defineProperty来劫持name属性的setter，getter，在数据变化时通知订阅者，触发相应的回调；2、发布者/订阅者：订阅者可定义为希望接收到通知的对象；发布者可定义为激活事件的对象。在本例中，文本输入框相当于一个订阅者，Obj相当于一个发布者。文本框通过addEventListener接收Obj给它的启动通知，触发相应的函数，进行视图更新。 一般来说，实际应用中会涉及多个订阅者，这时就需要一个消息订阅器来管理这些订阅者；另外还需要指令来初始化订阅者。详情及更复杂的例子可参考这篇博文：http://www.cnblogs.com/libin-1/p/6893712.html]]></content>
+      <categories>
+        <category>框架</category>
+      </categories>
+      <tags>
+        <tag>vue2.0</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下更新npm报错]]></title>
     <url>%2F2018%2F05%2F13%2FMac%E4%B8%8B%E6%9B%B4%E6%96%B0npm%E6%8A%A5%E9%94%99%2F</url>
     <content type="text"><![CDATA[今天在mac下用命令：npm i -g npm更新npm版本报错，报错信息如下：解决方法：在命令前面加上sudo：1sodu npm i -g npm 安装成功。]]></content>
