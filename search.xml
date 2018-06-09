@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[对象代理（数据隐私保护）]]></title>
+    <url>%2F2018%2F06%2F09%2F%E5%AF%B9%E8%B1%A1%E4%BB%A3%E7%90%86%EF%BC%88%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[学c++和java的时候，我们都可以快速方便地定义私有属性，但在js里面要定义私有属性就比较麻烦了。 es5中可以依靠Object.defineProperty()这个方法定义私有属性。12345678910111213141516var Person = &#123; name:'haha', age:15 &#125; Object.defineProperty(Person,'sex',&#123; writable:false,//设为只读 value:'male' &#125;); try&#123; Person.sex = 'female'; console.log(Person.sex);//sex属性还是male，并没有被改掉 &#125;catch(e)&#123; console.log(e); &#125; 在es6中我们可以使用对象代理,中间加个代理层来定义私有属性。1234567891011121314151617181920212223let Person = &#123; name:'haha', sex:'male', age:15 &#125;; let person = new Proxy(Person,&#123; get(target,key)&#123; return target[key] &#125;, set(target,key,value)&#123; if(key!=='sex')&#123; target[key]=value; &#125; &#125; &#125;); try&#123; person.sex = 'female'; console.log(Person.sex);//sex属性还是male，并没有被改掉 &#125;catch(e)&#123; console.log(e); &#125; Proxy是es6提供的新方法。使用代理的方式，用户操作的其实是person，而不是Person，这种方式可以在代理层中定义很多逻辑复杂的拦截规则，但是不会影响原始对象数据，是个很好的方法。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[默认参数]]></title>
     <url>%2F2018%2F06%2F09%2F%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%2F</url>
     <content type="text"><![CDATA[ES5中,如果函数调用时没有传入参数，需要使用默认的参数值时需要这么写：123456789101112function f(x,y,z)&#123; if(x === undefined)&#123; x = 7; &#125; if(y === undefined)&#123; y = 6; &#125; if(z === undefined)&#123; z = 5; &#125; return x+y+z;&#125; 在es6中就方便多了，可以直接写成这样：123function f(x=7,y=6,z=5)&#123; return x+y+z;//当x，y，z等于undefined时自动附上默认值&#125; es6可变参数：如果函数传入的参数个数不确定时，es6中可以这么写：12345678function f(...a)&#123; var sum = 0; a.forEach(item =&gt; &#123; sum += item; &#125;); return sum;&#125;console.log(f(1,2,3,4));//打印10]]></content>
