@@ -286,6 +286,589 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/默认参数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/默认参数/" itemprop="url">默认参数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-09T15:49:49+08:00">
+                2018-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ES5中,如果函数调用时没有传入参数，需要使用默认的参数值时需要这么写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x,y,z</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x === <span class="literal">undefined</span>)&#123;</span><br><span class="line">          x = <span class="number">7</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(y === <span class="literal">undefined</span>)&#123;</span><br><span class="line">          y = <span class="number">6</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(z === <span class="literal">undefined</span>)&#123;</span><br><span class="line">          z = <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x+y+z;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在es6中就方便多了，可以直接写成这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x=<span class="number">7</span>,y=<span class="number">6</span>,z=<span class="number">5</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y+z;<span class="comment">//当x，y，z等于undefined时自动附上默认值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>es6可变参数：<br>如果函数传入的参数个数不确定时，es6中可以这么写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">...a</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line">   a.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">         sum += item;</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(f(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>));<span class="comment">//打印10</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/箭头函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/箭头函数/" itemprop="url">箭头函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-09T15:33:53+08:00">
+                2018-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>函数写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">()=&gt;&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>()里面放参数，当参数只有一个时，()可以省略；如果{}的表达式全部座位返回值时，{}也可省略。<br>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> events = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> adds = events.map(<span class="function"><span class="params">v</span>=&gt;</span>v+<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
+<p>等价于：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> events = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> adds = events.map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;<span class="keyword">return</span> v+<span class="number">1</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>箭头函数与function的主要区别在于this的绑定。<br>function的this是在执行时进行绑定的，而箭头函数的this是在声明时进行绑定的，这样避免了this指向不明确的问题。<br>最典型的例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="number">11</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    x:<span class="number">22</span>,</span><br><span class="line">    y:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj.y);</span><br></pre></td></tr></table></figure></p>
+<p>打印出来是22，function的this在执行时绑定，绑定的是调用属性的对象，也就是obj自身的x，所以结果是22。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">11</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">      x:<span class="number">22</span>,</span><br><span class="line">      y:<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>打印出来是11，因为箭头函数的this在声明时绑定，取x的值为11，所以结果是11。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/es6块级作用域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/es6块级作用域/" itemprop="url">es6块级作用域</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-09T15:31:30+08:00">
+                2018-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ES5中，没有块级作用域，所以会出现以下情况：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> callbacks = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=<span class="number">2</span>;i++)&#123;</span><br><span class="line">  callbacks[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i * <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.table([</span><br><span class="line">  callbacks[<span class="number">0</span>](),</span><br><span class="line">  callbacks[<span class="number">1</span>](),</span><br><span class="line">  callbacks[<span class="number">2</span>](),</span><br><span class="line">])</span><br></pre></td></tr></table></figure></p>
+<p>这段代码的结果是输出3个6。</p>
+<p>首先var i=0这一句话，将i做了一个变量提升，i是一个跟callbacks平级的变量；<br>然后进行for循环，for 循环结束时，i的值已经被更新成为了3；<br>由于function(){return i*2}不是立即被调用的，而是循环结束后，也就是i等于3的时候才调用的，它执行的时候会去找它上一级作用域中i的值，发现i等于3，于是进行计算并输出，所以<code>callbacks[0]()</code>,<code>callbacks[1]()</code>,<code>callbacks[2]()</code>的结果全部都是6。</p>
+<p>ES6中我们可以用let来声明变量，将变量的作用域限定为块级作用域，不存在变量提升：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> callbacks = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;=<span class="number">2</span>;i++)&#123;</span><br><span class="line">  callbacks[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i * <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.table([</span><br><span class="line">  callbacks[<span class="number">0</span>](),</span><br><span class="line">  callbacks[<span class="number">1</span>](),</span><br><span class="line">  callbacks[<span class="number">2</span>](),</span><br><span class="line">])</span><br></pre></td></tr></table></figure></p>
+<p>结果为0，2，4。<br>let声明的变量为块作用域，作用于当前块；每次循环都会把值保留下来供后面的闭包使用。<br>这段for循环等价于：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    a[i] = (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(i);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在ES6中只需一个花括号就可以指定块作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">          <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="built_in">console</span>.log(foo() === <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">          &#123;</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">console</span>.log(foo() === <span class="number">2</span>);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          <span class="built_in">console</span>.log(foo() === <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结果是打印3个true。<br>可见两个作用域没有相互影响，一对花括号就已经把作用域隔离。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/es6常量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/06/es6常量/" itemprop="url">es6常量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T15:26:03+08:00">
+                2018-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在ES5中，一般利用window对象来定义常量，思路是将变量绑在window上，并设为只读状态。</p>
+<p>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">window</span>,<span class="string">"PI"</span>,&#123;</span><br><span class="line">     value:<span class="number">3.14</span>,</span><br><span class="line">     writeable:<span class="literal">false</span>,<span class="comment">//只读</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.PI);</span><br></pre></td></tr></table></figure></p>
+<p>ES6中，则可以直接通过const来声明常量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.14</span>;</span><br><span class="line"><span class="built_in">console</span>.log(PI);</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/Vue双向数据绑定原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1185,623 +1768,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/Less学习总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/Less学习总结/" itemprop="url">Less学习总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T11:17:01+08:00">
-                2018-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1、Less是什么"><a href="#1、Less是什么" class="headerlink" title="1、Less是什么"></a>1、Less是什么</h3><h4 id="Less类似于jQuery。"><a href="#Less类似于jQuery。" class="headerlink" title="Less类似于jQuery。"></a>Less类似于jQuery。</h4><p>——是一种css动态语言，属于css预处理语言的一种。它使用类似css的语法，为css赋予动态语言的特性，如变量、继承、函数、运算等，更方便css的维护与编写。</p>
-<h3 id="2、注释"><a href="#2、注释" class="headerlink" title="2、注释"></a>2、注释</h3><p>/**/ ：编译时保留，编译后的css文件中也能看到注释<br>//：编译时忽略，编译后的css文件中看不到</p>
-<h3 id="3、定义变量"><a href="#3、定义变量" class="headerlink" title="3、定义变量"></a>3、定义变量</h3><p>用符号@来定义变量</p>
-<ul>
-<li>例<br>定义：<br><code>@width:300px;</code><br>使用：<br><code>.box{width:@width;}</code></li>
-</ul>
-<h3 id="4、混合"><a href="#4、混合" class="headerlink" title="4、混合"></a>4、混合</h3><h4 id="编写可重用样式"><a href="#编写可重用样式" class="headerlink" title="编写可重用样式"></a>编写可重用样式</h4><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.border&#123;</span><br><span class="line">      border:solid 5px #fff;</span><br><span class="line">&#125;</span><br><span class="line">.box&#123;</span><br><span class="line">      .border;</span><br><span class="line">      margin:<span class="number">10</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="5、带参数的混合"><a href="#5、带参数的混合" class="headerlink" title="5、带参数的混合"></a>5、带参数的混合</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.border(@border_width)&#123;</span><br><span class="line">      border:solid @border_width #fff;</span><br><span class="line">&#125;</span><br><span class="line">.test&#123;</span><br><span class="line">     .border(<span class="number">30</span>px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="6、带默认值的混合"><a href="#6、带默认值的混合" class="headerlink" title="6、带默认值的混合"></a>6、带默认值的混合</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.border(@border_width:<span class="number">30</span>px)&#123;</span><br><span class="line">      border:solid @border_width #fff;</span><br><span class="line">&#125;</span><br><span class="line">.test&#123;</span><br><span class="line">     .border();<span class="comment">/*不报错，默认传入30px,若传入参数，则参数覆盖默认值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="7、匹配模式"><a href="#7、匹配模式" class="headerlink" title="7、匹配模式"></a>7、匹配模式</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.position(r)&#123;</span><br><span class="line">     position:relative;<span class="comment">/*相对定位*/</span></span><br><span class="line">&#125;</span><br><span class="line">.position(a)&#123;</span><br><span class="line">     position:absolute;<span class="comment">/*绝对定位*/</span></span><br><span class="line">&#125;</span><br><span class="line">.position(f)&#123;</span><br><span class="line">     position:fixed;<span class="comment">/*静止*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.test&#123;</span><br><span class="line">    .postion(a);<span class="comment">/*使用绝对定位*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="8、运算"><a href="#8、运算" class="headerlink" title="8、运算"></a>8、运算</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@width:<span class="number">300</span>px;</span><br><span class="line">.box&#123;<span class="attr">width</span>:@width+<span class="number">20</span>px;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9、嵌套"><a href="#9、嵌套" class="headerlink" title="9、嵌套"></a>9、嵌套</h3><p>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">li&#123;</span><br><span class="line">    a&#123;</span><br><span class="line">         color:#ff0000;</span><br><span class="line">         &amp;:hover&#123;#color:#0000ff;&#125;/*&amp;代表它的上一层选择器*/</span><br><span class="line">    &#125;</span><br><span class="line">    span:&#123;color:#00ff00&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>相当于：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li a&#123;color:#ff0000;&#125;</span><br><span class="line">li a:hover&#123;color:#0000ff;&#125;</span><br><span class="line">li span&#123;color:#00ff00&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="10、-arguments变量"><a href="#10、-arguments变量" class="headerlink" title="10、@arguments变量"></a>10、@arguments变量</h3><p><code>@arguments</code>包含了传进来的所有参数。<br>例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.test_border(@color:#fff,@so:solid,@width:30px)&#123;</span><br><span class="line">      border:@<span class="built_in">arguments</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="11、避免编译"><a href="#11、避免编译" class="headerlink" title="11、避免编译"></a>11、避免编译</h3><p>语法：<code>~&#39;&#39;</code></p>
-<p>######更多语法可查阅less官网。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/CSS让背景图片居中显示的方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/12/CSS让背景图片居中显示的方法/" itemprop="url">css让背景图片居中显示的方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T20:31:11+08:00">
-                2017-12-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>当我们的背景图片写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>时，表示背景图片不重复，位置会默认为在div中居于左上角。<br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;  </span><br><span class="line">    &lt;head&gt;  </span><br><span class="line">        &lt;meta charset=&quot;utf-8&quot; /&gt;  </span><br><span class="line">        &lt;title&gt;&lt;/title&gt;  </span><br><span class="line">        &lt;style type=&quot;text/css&quot;&gt;  </span><br><span class="line">            #header &#123;  </span><br><span class="line">                width: 100%;  </span><br><span class="line">                height: 400px;  </span><br><span class="line">                border: 1px solid;  </span><br><span class="line">                background: url(&quot;images/titleborder.png&quot;) no-repeat;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &lt;/style&gt;    </span><br><span class="line">    &lt;/head&gt;  </span><br><span class="line">    &lt;body&gt;  </span><br><span class="line">        &lt;div id=&quot;header&quot;&gt;  </span><br><span class="line">              </span><br><span class="line">        &lt;/div&gt;  </span><br><span class="line">    &lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p><img src="/img/4853241-7efa092bc1b6916e.png" alt="1.png"></p>
-<p>如果背景图片写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center center no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>效果是水平垂直居中对齐：</p>
-<p><img src="/img/4853241-38a439354e0eeba7.png" alt="2.png"><br>第一个center表示水平居中，第二个center表示垂直居中。<br>要令背景图片水平居中，并贴近div顶部，代码可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center 0 no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>或者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) center top no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p><img src="/img/4853241-69e740d38d342d23.png" alt="image.png"></p>
-<p>令背景图片居于右上角的写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) right top no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p>效果：</p>
-<p><img src="/img/4853241-11026cf9df09c476.png" alt="image.png"></p>
-<p>左居中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;images/titleborder.png&quot;) left center no-repeat;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/4853241-42c979901412a471.png" alt="image.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/21/js数组去重/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/21/js数组去重/" itemprop="url">js数组去重、对象数组去重</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T23:17:00+08:00">
-                2017-11-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1、普通数组去重"><a href="#1、普通数组去重" class="headerlink" title="1、普通数组去重"></a>1、普通数组去重</h3><h4 id="普通数组去重"><a href="#普通数组去重" class="headerlink" title="普通数组去重"></a>普通数组去重</h4><h5 id="方法一：遍历数组法"><a href="#方法一：遍历数组法" class="headerlink" title="方法一：遍历数组法"></a>方法一：遍历数组法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    <span class="comment">//遍历当前数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        <span class="comment">//判断array[i]是否在临时数组中，不在则将array[i]的值复制到temp里</span></span><br><span class="line">        <span class="comment">//indexOf()方法可返回某个指定的字符串或数组值在字符串或数组中首次出现的位置，若不在其中则返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (temp.indexOf(array[i]) === <span class="number">-1</span>)</span><br><span class="line">            temp.push(array[i]); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="方法二：排序法"><a href="#方法二：排序法" class="headerlink" title="方法二：排序法"></a>方法二：排序法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    array.sort();<span class="comment">//先给当前数组排序</span></span><br><span class="line">    temp.push(array[<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">//因为数组已经经过排序，所以重复元素一定相邻，判断当前数组第i个元素与temp的最后一个元素是否相等，不相等时才复制元素</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(array[i] != temp[temp.length<span class="number">-1</span>])</span><br><span class="line">            temp.push(array[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="方法三：对象法"><a href="#方法三：对象法" class="headerlink" title="方法三：对象法"></a>方法三：对象法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func3</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temp = [];<span class="comment">//临时数组</span></span><br><span class="line">    <span class="keyword">var</span> json = &#123;&#125;;<span class="comment">//创建一个空对象</span></span><br><span class="line">    <span class="comment">//将当前数组的元素值当作对象的属性，遍历数组，比对对象，如果对象的这个属性不存在则将当前数组元素复制到临时数组，并添加该属性且将属性值赋值为1</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;array.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!json[array[i]])&#123;<span class="comment">//如果对象没有该属性</span></span><br><span class="line">            temp.push(array[i]);</span><br><span class="line">            json[array[i]] = <span class="number">1</span>;<span class="comment">//添加属性，将属性值赋值为1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2、对象数组去重"><a href="#2、对象数组去重" class="headerlink" title="2、对象数组去重"></a>2、对象数组去重</h3><h5 id="方法一：将对象数组中name属性相同的项去重"><a href="#方法一：将对象数组中name属性相同的项去重" class="headerlink" title="方法一：将对象数组中name属性相同的项去重"></a>方法一：将对象数组中name属性相同的项去重</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func4</span>(<span class="params">objArray</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = [];<span class="comment">//去重后返回的结果数组</span></span><br><span class="line">    <span class="keyword">var</span> temp = &#123;&#125;;<span class="comment">//临时对象</span></span><br><span class="line">    <span class="comment">//将对象数组中每一项的name值作为属性，若temp不拥有此属性时则为temp添加此属性且将其值赋为true，并将这一项push到结果数组中</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;objArray.length;i++)&#123;  </span><br><span class="line">        <span class="keyword">var</span> myname = objArray[i].name;</span><br><span class="line">        <span class="keyword">if</span>(temp[myname])&#123;<span class="comment">//如果temp中已经存在此属性名，则说明遇到重复项</span></span><br><span class="line">            <span class="keyword">continue</span>;<span class="comment">//不继续执行接下来的代码，跳转至循环开头</span></span><br><span class="line">        &#125;  </span><br><span class="line">        temp[myname] = <span class="literal">true</span>;<span class="comment">//为temp添加此属性（myname）且将其值赋为true</span></span><br><span class="line">        result.push(objArray[i]);<span class="comment">//将这一项复制到结果数组result中去</span></span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> result;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="方法二：使用reduce方法将对象数组中name属性相同的项去重"><a href="#方法二：使用reduce方法将对象数组中name属性相同的项去重" class="headerlink" title="方法二：使用reduce方法将对象数组中name属性相同的项去重"></a>方法二：使用reduce方法将对象数组中name属性相同的项去重</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func5</span>(<span class="params">objArray</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> hash = &#123;&#125;; </span><br><span class="line">    <span class="comment">//reduce方法有两个参数，第一个参数是一个callback，用于针对数组项的操作；第二个参数则是传入的初始值，这个初始值用于单个数组项的操作。</span></span><br><span class="line">    objArray = objArray.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">item, next</span>) </span>&#123;<span class="comment">//这是针对数组项操作的函数，对于每个数组项，reduce方法都会将其调用一次</span></span><br><span class="line">        <span class="comment">//可使用最多四个参数来声明回调函数（第一个参数：通过上一次调用回调函数获得的值;第二个参数：当前数组元素的值；第三个参数：当前数组元素的数字索引；第四个参数：包含该元素的数组对象）</span></span><br><span class="line">        <span class="comment">//这里只使用了两个参数，所以item和next分别代表上一次调用回调函数后的值和objArray项值</span></span><br><span class="line">        hash[next.name]?<span class="string">''</span>:hash[next.name]=<span class="literal">true</span>&amp;&amp;item.push(next);<span class="comment">//与func3逻辑相似 </span></span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;, []);<span class="comment">//初始值是一个空对象，使用reduce方法返回的是空对象通过叠加执行之后的结果</span></span><br><span class="line">    <span class="keyword">return</span> objArray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3、代码汇总与执行"><a href="#3、代码汇总与执行" class="headerlink" title="3、代码汇总与执行"></a>3、代码汇总与执行</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">(function()&#123;</span></span><br><span class="line"><span class="string">    array = [1,2,3,3,3];//测试数组</span></span><br><span class="line"><span class="string">    objArray = [&#123;age:1,name:'a'&#125;,&#123;age:2,name:'a'&#125;,&#123;age:3,name:'c'&#125;];//测试对象数组</span></span><br><span class="line"><span class="string">    console.log(func1(array));//遍历数组法</span></span><br><span class="line"><span class="string">    console.log(func2(array));//排序法</span></span><br><span class="line"><span class="string">    console.log(func3(array));//对象法</span></span><br><span class="line"><span class="string">    console.log(func4(objArray));//将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">    console.log(func5(objArray));//使用数组内置的reduce方法将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">&#125;)()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//遍历数组法</span></span><br><span class="line"><span class="string">function func1(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    //遍历当前数组</span></span><br><span class="line"><span class="string">    for(var i=0;i&lt;array.length;i++)&#123;</span></span><br><span class="line"><span class="string">        //判断array[i]是否在临时数组中，不在则将array[i]的值复制到temp里</span></span><br><span class="line"><span class="string">        //indexOf()方法可返回某个指定的字符串或数组值在字符串或数组中首次出现的位置，若不在其中则返回-1</span></span><br><span class="line"><span class="string">        if (temp.indexOf(array[i]) === -1)</span></span><br><span class="line"><span class="string">            temp.push(array[i]); </span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//排序法</span></span><br><span class="line"><span class="string">function func2(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    array.sort();//先给当前数组排序</span></span><br><span class="line"><span class="string">    temp.push(array[0]);</span></span><br><span class="line"><span class="string">    //因为数组已经经过排序，所以重复元素一定相邻，判断当前数组第i个元素与temp的最后一个元素是否相等，不相等时才复制元素</span></span><br><span class="line"><span class="string">    for(var i=1;i&lt;array.length;i++)&#123;</span></span><br><span class="line"><span class="string">        if(array[i] != temp[temp.length-1])</span></span><br><span class="line"><span class="string">            temp.push(array[i]);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//对象法</span></span><br><span class="line"><span class="string">function func3(array)&#123;</span></span><br><span class="line"><span class="string">    var temp = [];//临时数组</span></span><br><span class="line"><span class="string">    var json = &#123;&#125;;//创建一个空对象</span></span><br><span class="line"><span class="string">    //将当前数组的元素值当作对象的属性，遍历数组，比对对象，如果对象的这个属性不存在则将当前数组元素复制到临时数组，并添加该属性且将属性值赋值为1</span></span><br><span class="line"><span class="string">    for(var i = 0; i&lt;array.length; i++)&#123;</span></span><br><span class="line"><span class="string">        if(!json[array[i]])&#123;//如果对象没有该属性</span></span><br><span class="line"><span class="string">            temp.push(array[i]);</span></span><br><span class="line"><span class="string">            json[array[i]] = 1;//添加属性，将属性值赋值为1</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return temp;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">function func4(objArray) &#123;</span></span><br><span class="line"><span class="string">    var result = [];//去重后返回的结果数组</span></span><br><span class="line"><span class="string">    var temp = &#123;&#125;;//临时对象</span></span><br><span class="line"><span class="string">    //将对象数组中每一项的name值作为属性，若temp不拥有此属性时则为temp添加此属性且将其值赋为true，并将这一项push到结果数组中</span></span><br><span class="line"><span class="string">    for(var i=0;i&lt;objArray.length;i++)&#123;  </span></span><br><span class="line"><span class="string">        var myname = objArray[i].name;</span></span><br><span class="line"><span class="string">        if(temp[myname])&#123;//如果temp中已经存在此属性名，则说明遇到重复项</span></span><br><span class="line"><span class="string">            continue;//不继续执行接下来的代码，跳转至循环开头</span></span><br><span class="line"><span class="string">        &#125;  </span></span><br><span class="line"><span class="string">        temp[myname] = true;//为temp添加此属性（myname）且将其值赋为true</span></span><br><span class="line"><span class="string">        result.push(objArray[i]);//将这一项复制到结果数组result中去</span></span><br><span class="line"><span class="string">    &#125;  </span></span><br><span class="line"><span class="string">    return result;  </span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//使用reduce方法将对象数组中name属性相同的项去重</span></span><br><span class="line"><span class="string">function func5(objArray)&#123;</span></span><br><span class="line"><span class="string">    var hash = &#123;&#125;; </span></span><br><span class="line"><span class="string">    //reduce方法有两个参数，第一个参数是一个callback，用于针对数组项的操作；第二个参数则是传入的初始值，这个初始值用于单个数组项的操作。</span></span><br><span class="line"><span class="string">    objArray = objArray.reduce(function(item, next) &#123;//这是针对数组项操作的函数，对于每个数组项，reduce方法都会将其调用一次</span></span><br><span class="line"><span class="string">        //可使用最多四个参数来声明回调函数（第一个参数：通过上一次调用回调函数获得的值;第二个参数：当前数组元素的值；第三个参数：当前数组元素的数字索引；第四个参数：包含该元素的数组对象）</span></span><br><span class="line"><span class="string">        //这里只使用了两个参数，所以item和next分别代表上一次调用回调函数后的值和objArray项值</span></span><br><span class="line"><span class="string">        hash[next.name]?'':hash[next.name]=true&amp;&amp;item.push(next);//与func3逻辑相似 </span></span><br><span class="line"><span class="string">        return item;</span></span><br><span class="line"><span class="string">    &#125;, []);//初始值是一个空对象，使用reduce方法返回的是空对象通过叠加执行之后的结果</span></span><br><span class="line"><span class="string">    return objArray;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/jquery复选框/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/12/jquery复选框/" itemprop="url">jQuery操作复选框选中状态，prop()和attr()的区别和使用方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T20:39:14+08:00">
-                2017-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天写代码遇到一个小小的问题，情况是这样的：我的页面中有两个复选框，我想实现选中一个复选框的同时另一个复选框也被选中，取消选中时亦然。一开始我用的是attr()和removeAttr()的方法，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> /&gt;</span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox2"</span> /&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="string">"#checkbox1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox1'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).attr(<span class="string">"checked"</span>,<span class="string">'check'</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).removeAttr(<span class="string">"checked"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    $(<span class="string">"#checkbox2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox2'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).attr(<span class="string">"checked"</span>,<span class="string">'check'</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).removeAttr(<span class="string">"checked"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>后来发现这个方法不行，会有Bug：第一次我选中复选框A，复选框B可以同时自动被选中，取消选中复选框A复选框B也同时取消，好，到这里是没问题的；但如果我这样选择：选中复选框A，复选框B同时自动选中，再点击复选框B来取消选中两个复选框，就没有用了，以后再怎么选中A或选中B，另一个都不为所动。<br>然后我试着换了个方法，使用prop()来替代attr()，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> /&gt;</span><br><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox2"</span> /&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(<span class="string">"#checkbox1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox1'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox2'</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    $(<span class="string">"#checkbox2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bol = $(<span class="string">'#checkbox2'</span>).is(<span class="string">':checked'</span>);</span><br><span class="line">        <span class="keyword">if</span>(bol)&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(<span class="string">'#checkbox1'</span>).prop(<span class="string">"checked"</span>,<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>完全没问题，无论什么时候A与B的选中状态都是同步的：</p>
-<p><img src="/img/4853241-885d46e82a739b3b.png" alt="image.png"></p>
-<p><img src="/img/4853241-407375939f788682.png" alt="image.png"><br>这是什么原因呢？到网上查了一下，原理是这样的：<br>“attr”是”attribute”的缩写，表示HTML文档节点的属性，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"mycheckbox"</span>  checked=<span class="string">"checked"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这里面id、class、checked都是input（HTML文档节点）的属性；”prop”是”property”的缩写，表示JS对象的属性，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student = &#123;<span class="attr">name</span>:<span class="string">"张三"</span>,<span class="attr">age</span>:<span class="string">"18"</span>,<span class="attr">id</span>:<span class="string">"001"</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这里面name、age、id都是student（JS对象）的属性。<br>在jQuery 1.6之前，只有attr()方法没有prop()方法，1.6及之后的版本增加了prop()方法，所以使用1.6及之后版本的jQuery，操作文档节点的属性和JS对象的属性需要分别使用其对应的方法。<br>jQuery认为：attribute的checked、selected、disabled表示的是标签初始状态的值，所以我在使用<code>attr(&quot;checked&quot;,&#39;check&#39;)</code>方法时，仅仅是为<code>input</code>增加了一个checked的属性，即只设定了该复选框的初始状态为选中状态，而没有改变该复选框的实时选中状态，所以会出现上述Bug。只有property的值才能表示该对象的实时属性，故在我这种情况下使用<code>prop(&quot;checked&quot;,true)</code>才是正确的。<br>最后记录几个使用attr()和prop()时的细节问题：</p>
-<ul>
-<li>对于表单元素的checked、selected、disabled等属性，在jQuery 1.6之前，attr()获取这些属性的返回值为Boolean类型，如果被选中(或禁用)就返回true，否则返回false。但是从1.6开始，使用attr()获取这些属性的返回值为String类型，如果被选中(或禁用)就返回”checked”、”selected”或”disabled”，如果不需要这个属性了，应使用removeAttr()将其移除。</li>
-<li>1.6及之后请使用prop()来设定表单的实时状态（如：checked、selected、disabled），值为true或false。</li>
-<li>1.6及之后attr()设置的值只能是String型的，而prop()设置的值可以是任意数据类型。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1847,7 +1818,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1869,7 +1840,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

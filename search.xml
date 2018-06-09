@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[默认参数]]></title>
+    <url>%2F2018%2F06%2F09%2F%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[ES5中,如果函数调用时没有传入参数，需要使用默认的参数值时需要这么写：123456789101112function f(x,y,z)&#123; if(x === undefined)&#123; x = 7; &#125; if(y === undefined)&#123; y = 6; &#125; if(z === undefined)&#123; z = 5; &#125; return x+y+z;&#125; 在es6中就方便多了，可以直接写成这样：123function f(x=7,y=6,z=5)&#123; return x+y+z;//当x，y，z等于undefined时自动附上默认值&#125; es6可变参数：如果函数传入的参数个数不确定时，es6中可以这么写：12345678function f(...a)&#123; var sum = 0; a.forEach(item =&gt; &#123; sum += item; &#125;); return sum;&#125;console.log(f(1,2,3,4));//打印10]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[箭头函数]]></title>
+    <url>%2F2018%2F06%2F09%2F%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[函数写法：123()=&gt;&#123;&#125; ()里面放参数，当参数只有一个时，()可以省略；如果{}的表达式全部座位返回值时，{}也可省略。例：12let events = [1,2,3,4,5];let adds = events.map(v=&gt;v+1); 等价于：12let events = [1,2,3,4,5];let adds = events.map(function(v)&#123;return v+1&#125;) 箭头函数与function的主要区别在于this的绑定。function的this是在执行时进行绑定的，而箭头函数的this是在声明时进行绑定的，这样避免了this指向不明确的问题。最典型的例子：12345678var x=11;var obj = &#123; x:22, y:function()&#123; console.log(this.x); &#125;&#125;console.log(obj.y); 打印出来是22，function的this在执行时绑定，绑定的是调用属性的对象，也就是obj自身的x，所以结果是22。1234567var x = 11;var obj = &#123; x:22, y:()=&gt;&#123; console.log(this.x); &#125;&#125; 打印出来是11，因为箭头函数的this在声明时绑定，取x的值为11，所以结果是11。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[es6块级作用域]]></title>
+    <url>%2F2018%2F06%2F09%2Fes6%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[ES5中，没有块级作用域，所以会出现以下情况：123456789101112var callbacks = [];for(var i=0;i&lt;=2;i++)&#123; callbacks[i] = function()&#123; return i * 2; &#125;&#125;console.table([ callbacks[0](), callbacks[1](), callbacks[2](),]) 这段代码的结果是输出3个6。 首先var i=0这一句话，将i做了一个变量提升，i是一个跟callbacks平级的变量；然后进行for循环，for 循环结束时，i的值已经被更新成为了3；由于function(){return i*2}不是立即被调用的，而是循环结束后，也就是i等于3的时候才调用的，它执行的时候会去找它上一级作用域中i的值，发现i等于3，于是进行计算并输出，所以callbacks[0](),callbacks[1](),callbacks[2]()的结果全部都是6。 ES6中我们可以用let来声明变量，将变量的作用域限定为块级作用域，不存在变量提升：123456789101112const callbacks = [];for(let i=0;i&lt;=2;i++)&#123; callbacks[i] = function()&#123; return i * 2; &#125;&#125;console.table([ callbacks[0](), callbacks[1](), callbacks[2](),]) 结果为0，2，4。let声明的变量为块作用域，作用于当前块；每次循环都会把值保留下来供后面的闭包使用。这段for循环等价于：1234567for (let i = 0; i &lt; 10; i++) &#123; a[i] = (function(i) &#123; return function()&#123; console.log(i); &#125; &#125;)(i);&#125; 在ES6中只需一个花括号就可以指定块作用域。123456789101112131415&#123; function foo()&#123; return 1; &#125; console.log(foo() === 1); &#123; function foo()&#123; return 2; &#125; console.log(foo() === 2); &#125; console.log(foo() === 1);&#125; 结果是打印3个true。可见两个作用域没有相互影响，一对花括号就已经把作用域隔离。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[es6常量]]></title>
+    <url>%2F2018%2F06%2F06%2Fes6%E5%B8%B8%E9%87%8F%2F</url>
+    <content type="text"><![CDATA[在ES5中，一般利用window对象来定义常量，思路是将变量绑在window上，并设为只读状态。 代码：12345Object.defineProperty(window,"PI",&#123; value:3.14, writeable:false,//只读&#125;);console.log(window.PI); ES6中，则可以直接通过const来声明常量。12const PI = 3.14;console.log(PI);]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue双向数据绑定原理]]></title>
     <url>%2F2018%2F05%2F31%2FVue%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86%2F</url>
     <content type="text"><![CDATA[什么是双向数据绑定？Vue是个MVVM框架，当数据发生变化时，视图也跟着发生变化，当视图发生变化时，数据也会跟着同步变化。双向数据绑定，一般是对于UI控件来说的，非UI控件不会涉及到双向数据绑定。 Vue双向数据绑定是怎么实现的？官方文档上说得很简单——用v-model指令在表单元素上创建双向数据绑定。那么，v-model背后的实现原理又是什么呢？它的基本原理是利用Object.defineProperty()这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的。使用Object.defineProperty()实现一个简单的双向数据绑定小例子：123456789101112131415161718192021222324252627&lt;!doctype html&gt;&lt;html&gt; &lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input id="text" type="text" /&gt; &lt;p id="p"&gt;&lt;/p&gt; &lt;/body&gt; &lt;script type="text/javascript"&gt; var obj = &#123;&#125;; Object.defineProperty(obj,"name",&#123; get:function()&#123; return name; &#125;, set:function(value)&#123; document.getElementById("text").value = value; document.getElementById("p").innerHTML = value; &#125; &#125;); var input = document.getElementById("text"); input.addEventListener("input",function(event)&#123; var text = event.target.value; obj.name = text; &#125;); &lt;/script&gt;&lt;/html&gt; 效果： 可以看到，我们在输入框输入内容时，标签内会显示对应的内容，这说明实现了model=&gt;view的绑定。现在我们在控制台给obj.name赋值，发现赋值后输入框的内容变成了所赋的那个值： 说明实现了view=&gt;model的绑定。 当然vue的实现比这复杂得多，详细请查看网上大牛们的博客。 这种实现双向数据绑定的方法叫作数据劫持结合发布者-订阅者模式。 简单解释什么是数据劫持结合发布者-订阅者模式：1、数据劫持：在本例中，通过Object.defineProperty来劫持name属性的setter，getter，在数据变化时通知订阅者，触发相应的回调；2、发布者/订阅者：订阅者可定义为希望接收到通知的对象；发布者可定义为激活事件的对象。在本例中，文本输入框相当于一个订阅者，Obj相当于一个发布者。文本框通过addEventListener接收Obj给它的启动通知，触发相应的函数，进行视图更新。 一般来说，实际应用中会涉及多个订阅者，这时就需要一个消息订阅器来管理这些订阅者；另外还需要指令来初始化订阅者。详情及更复杂的例子可参考这篇博文：http://www.cnblogs.com/libin-1/p/6893712.html]]></content>
