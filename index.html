@@ -286,6 +286,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/Promise学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lizer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lizer的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/10/Promise学习笔记/" itemprop="url">Promise学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-10T12:48:34+08:00">
+                2018-06-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是Promise？"><a href="#什么是Promise？" class="headerlink" title="什么是Promise？"></a>什么是Promise？</h3><p>Promise是es6新增的异步编程的一种解决方案，是es6的原生对象。<br>它有三种状态：</p>
+<ul>
+<li>pending 进行中</li>
+<li>resolved 已完成</li>
+<li>rejected 已失败<br>当Promise的状态由pending转变为resolved时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态。</li>
+</ul>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><ol>
+<li><p>用函数包装异步操作，返回Promise对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">       resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">run2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第二个run'</span>);</span><br><span class="line">       resolve(<span class="string">'第二个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链式操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">run1().then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//then中放的语句是等run执行完毕后才执行的</span></span><br><span class="line">  <span class="built_in">console</span>.log(data);<span class="comment">//这个data是resolve(xxx)中传入的xxx</span></span><br><span class="line">  <span class="keyword">return</span> run2();<span class="comment">//这里run2的返回值也是一个Promise对象，它的resolve会传给下一个then</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"结束了"</span>;<span class="comment">//也可以直接把数据传给下一个then</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);<span class="comment">//接收到上一个then return的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reject怎么用？<br>resolve是已完成后的回调函数，reject是已失败后的回调函数。<br>reject就是把Promise的状态置为rejected，然后在then中捕捉到，或者用catch捕捉，执行“失败”的回调。<br>把代码改为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">       <span class="keyword">if</span>(a === <span class="string">'reject'</span>)&#123;</span><br><span class="line">         reject(<span class="string">'第一个run已失败'</span>);<span class="comment">//reject代表异步操作执行失败后的回调函数</span></span><br><span class="line">       &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">run1(<span class="string">'reject'</span>).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'resolved'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(data);</span><br><span class="line"> &#125;,(reason)=&gt;&#123;<span class="comment">//then的第二个参数捕捉reject</span></span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'rejected'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(reason);</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者用catch来捕捉reject并制定reject的回调：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">run1(<span class="string">'reject'</span>).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'resolved'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(data);</span><br><span class="line"> &#125;).catch(<span class="function">(<span class="params">reason</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'rejected'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(reason);</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>用catch的好处是：resolve回调抛出异常时，不会报错卡死JS，而是会进到这个catch方法中。</p>
+<ol start="4">
+<li>all的用法：<br>Promise.all接收一个函数数组参数，里面的值最终都返回Promise对象。数组中的异步操作并行执行，等它们都执行完后才会进到then里面，all会把所有的异步操作的结果放进一个数组中传给then;如果执行失败，则返回最先被reject的结果值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([run1(),run2(),run3()]).then(<span class="function">(<span class="params">result</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(result);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="5">
+<li>race的用法：<br>all的执行顺序是按数组下标先后执行，但race是哪个执行得快先返回哪个结果值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">       <span class="comment">//这里做一些异步操作</span></span><br><span class="line">       setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">         <span class="keyword">if</span>(a === <span class="string">'reject'</span>)&#123;</span><br><span class="line">           reject(<span class="string">'第一个run已失败'</span>);<span class="comment">//reject代表异步操作执行失败后的回调函数</span></span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">           resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">         &#125;</span><br><span class="line">       &#125;,<span class="number">10000</span>)</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> p;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">run2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">       <span class="comment">//这里做一些异步操作</span></span><br><span class="line">       setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'第二个run'</span>);</span><br><span class="line">         resolve(<span class="string">'第二个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">       &#125;,<span class="number">5000</span>)</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> p;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">Promise</span>.race([run1(),run2()]).then(<span class="function">(<span class="params">result</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(result);</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>打印结果，可以看到，上面的代码run2先被执行，因为run2更快。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/对象代理（数据隐私保护）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1599,177 +1768,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/25/一个例子学习Vue2.0组件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lizer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lizer的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/25/一个例子学习Vue2.0组件/" itemprop="url">一个例子学习Vue2.0组件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T11:17:01+08:00">
-                2018-03-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>先看例子效果，是个简单的选择输入框：<br><img src="/img/4853241-c5903ee01d9fb832.png" alt="image.png"></p>
-<p>这个例子将Vue组件的学习简化为三部分：</p>
-<ul>
-<li>组件注册（全局注册和局部注册）</li>
-<li>组件组合（父子组件间的通信）</li>
-<li>组件复用（Prop、事件、插槽）<h3 id="1、组件注册"><a href="#1、组件注册" class="headerlink" title="1、组件注册"></a>1、组件注册</h3><h4 id="全局注册和局部注册"><a href="#全局注册和局部注册" class="headerlink" title="全局注册和局部注册"></a>全局注册和局部注册</h4>官方文档已经给出了全局注册和局部注册的实例代码：<br>全局注册<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 注册</span><br><span class="line">Vue.component(&apos;my-component&apos;, &#123;</span><br><span class="line">  template: &apos;&lt;div&gt;A custom component!&lt;/div&gt;&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>局部注册<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;<span class="comment">//声明一个vue实例</span></span><br><span class="line">      el: <span class="string">'#main'</span>,</span><br><span class="line">      components: &#123;<span class="comment">//在实例中注册组件</span></span><br><span class="line">            <span class="string">'my-component'</span>: &#123;</span><br><span class="line">                   template: <span class="string">'&lt;div&gt;A custom component!&lt;/div&gt;'</span></span><br><span class="line">            &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用局部注册的组件只能在其所在实例中使用。<br>本例中使用局部注册的方式来注册组件。<br>为方便接下来的父子组件间通信的学习，将下拉列表块作为单独的子组件注册，整个选择输入框是它的父组件。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个vue实例</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#main'</span>,</span><br><span class="line">    components: &#123;<span class="comment">//注册父组件</span></span><br><span class="line">        <span class="string">'father-component'</span>: Father</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>html部分：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"main"</span>&gt;</span><br><span class="line">     &lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span>&gt;&lt;/father-component&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="2、组件组合"><a href="#2、组件组合" class="headerlink" title="2、组件组合"></a>2、组件组合</h3><p>父子组件间的通信官方文档总结得很清楚：<br>在 Vue 中，父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息。</p>
-<h4 id="父组件通过prop将数据传递给子组件"><a href="#父组件通过prop将数据传递给子组件" class="headerlink" title="父组件通过prop将数据传递给子组件"></a>父组件通过prop将数据传递给子组件</h4><p>我们希望从外部将下拉列表的数据传给父组件，父组件再将它下发给子组件，使用prop完成这个过程。<br>首先在实例中定义city的值，并传入父组件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"main"</span>&gt;</span><br><span class="line">    &lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span> v-bind:list=<span class="string">"city"</span>&gt;&lt;/father-component&gt;&lt;!-- 绑定属性list的值为city --&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">            el: <span class="string">'#main'</span>,</span><br><span class="line">            components: &#123;</span><br><span class="line">                <span class="string">'father-component'</span>: Father</span><br><span class="line">            &#125;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                city:[<span class="string">"北京"</span>,<span class="string">"上海"</span>,<span class="string">"杭州"</span>,<span class="string">"广州"</span>]<span class="comment">//初始化city的值</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>父子组件中使用prop,父组件在使用子组件的地方绑定传入的列表值，子组件使用v-for将列表值显示出来:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    props:[<span class="string">'list'</span>],</span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这时我们只要改变外部定义的city的值，子组件中列表值也会改变。</p>
-<h4 id="子组件通过vue的自定义事件系统与父组件进行通信"><a href="#子组件通过vue的自定义事件系统与父组件进行通信" class="headerlink" title="子组件通过vue的自定义事件系统与父组件进行通信"></a>子组件通过vue的自定义事件系统与父组件进行通信</h4><p>我们想要实现点击子组件的列表项时，就将该列表项的值传到父组件输入框里，即改变父组件中定义的value的值（input已于value建立双向数据绑定）。<br>每个vue实例都实现了事件接口：</p>
-<ul>
-<li>使用 $on(eventName) 监听事件</li>
-<li>使用 $emit(eventName, optionalPayload) 触发事件<br>首先在注册子组件时，为每个列表项绑定一个点击事件childFun，在childFun中我们将触发父组件的tempFun事件，同时将列表项的值传过去。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'child-component'</span>: &#123;</span><br><span class="line">                    props:[<span class="string">'list'</span>],</span><br><span class="line">                    template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">                    methods:&#123;</span><br><span class="line">                        childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在父组件中监听tempFun事件是否被触发，一旦被触发将调用fatherFun方法更新value的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;<span class="comment">//父组件，在template中使用子组件&lt;child-component&gt;&lt;/child-component&gt;</span></span><br><span class="line">    props:[<span class="string">'list'</span>],</span><br><span class="line">    data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//组件中的data必须写成函数形式</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            value:<span class="string">""</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down"&gt;&lt;span class="up"&gt;&lt;/span&gt;&lt;span class="down"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    components:&#123;<span class="comment">//在父组件中注册子组件</span></span><br><span class="line">        <span class="string">'child-component'</span>: &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        fatherFun:<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.value = item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>效果：<br><img src="/img/4853241-c331ad96aeff4b79.png" alt="image.png"></p>
-<p><img src="/img/4853241-a2459e73f1a6b9e4.png" alt="image.png"><br>用同样的思路完善一下代码，实现：监听输入框的输入值，当手动输入值时将列表显现出来，将手动将输入值清空时列表自动隐藏；当输入框隐藏时，右边的三角形的尖角指向下，当输入框显现时，右边的三角形的尖角指向上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Father = &#123;</span><br><span class="line">            props:[<span class="string">'list'</span>],</span><br><span class="line">            data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    value:<span class="string">""</span>,</span><br><span class="line">                    isShow:<span class="literal">false</span>,</span><br><span class="line">                    spanDownShow:<span class="literal">true</span>,</span><br><span class="line">                    spanUpShow:<span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down" v-on:click="showPanel"&gt;&lt;span class="up" v-show="spanUpShow"&gt;&lt;/span&gt;&lt;span class="down" v-show="spanDownShow"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun" v-show="isShow"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span>,</span><br><span class="line">            components:&#123;</span><br><span class="line">                <span class="string">'child-component'</span>: &#123;</span><br><span class="line">                    props:[<span class="string">'list'</span>],</span><br><span class="line">                    template:<span class="string">'&lt;div class="panel"&gt;&lt;ul&gt;&lt;li v-for="item in list" v-on:click="childFun(item)" v-bind:value="list.item"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>,</span><br><span class="line">                    methods:&#123;</span><br><span class="line">                        childFun:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">this</span>.$emit(<span class="string">'tempFun'</span>,value);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                fatherFun:<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.value = item;</span><br><span class="line">                &#125;,</span><br><span class="line">                showPanel:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">this</span>.isShow = !<span class="keyword">this</span>.isShow;</span><br><span class="line">                    <span class="keyword">this</span>.spanDownShow = !<span class="keyword">this</span>.spanDownShow;</span><br><span class="line">                    <span class="keyword">this</span>.spanUpShow = !<span class="keyword">this</span>.spanUpShow;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            watch:&#123;</span><br><span class="line">                value:<span class="function"><span class="keyword">function</span>(<span class="params">newValue,oldValue</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(newValue === <span class="string">""</span>)&#123;</span><br><span class="line">                        <span class="keyword">this</span>.isShow = <span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanDownShow = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanUpShow = <span class="literal">false</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">this</span>.isShow = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanDownShow = <span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">this</span>.spanUpShow = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">            el: <span class="string">'#main'</span>,</span><br><span class="line">            components: &#123;</span><br><span class="line">                <span class="string">'father-component'</span>: Father</span><br><span class="line">            &#125;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                city:[<span class="string">"北京"</span>,<span class="string">"上海"</span>,<span class="string">"杭州"</span>,<span class="string">"广州"</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="3、组件复用"><a href="#3、组件复用" class="headerlink" title="3、组件复用"></a>3、组件复用</h3><p>Vue 组件的 API 来自三部分——prop、事件和插槽：</p>
-<h4 id="prop允许外部环境传递数据给组件"><a href="#prop允许外部环境传递数据给组件" class="headerlink" title="prop允许外部环境传递数据给组件"></a>prop允许外部环境传递数据给组件</h4><p>当我们在vue实例中使用多个输入选择框组件时，可以通过传入不同的列表值使每个输入选择框的下拉列表值都不一样。<br><img src="https://upload-images.jianshu.io/upload_images/4853241-fb5a0fa91f401960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h4 id="事件允许从组件内触发外部环境的副作用"><a href="#事件允许从组件内触发外部环境的副作用" class="headerlink" title="事件允许从组件内触发外部环境的副作用"></a>事件允许从组件内触发外部环境的副作用</h4><p>同子组件触发父组件的事件，也可通过$emit从父组件内部触发外部环境的function。</p>
-<h4 id="插槽允许外部环境将额外的内容组合在组件中"><a href="#插槽允许外部环境将额外的内容组合在组件中" class="headerlink" title="插槽允许外部环境将额外的内容组合在组件中"></a>插槽允许外部环境将额外的内容组合在组件中</h4><p>使用<slot>接口分发内容，最初在<slot>中的内容为备用内容，当没有内容被插入时才显示备用内容。<br>示例：<br>我们使用父组件时想加上一段话：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;father-component <span class="class"><span class="keyword">class</span></span>=<span class="string">"center"</span> v-bind:list=<span class="string">"city"</span>&gt;</span><br><span class="line">       &lt;p&gt;使用插槽&lt;<span class="regexp">/p&gt;   </span></span><br><span class="line"><span class="regexp">&lt;/</span>father-component&gt;</span><br></pre></td></tr></table></figure></slot></slot></p>
-<p>父组件的template改为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">template:<span class="string">'&lt;div class="fatherCom"&gt;&lt;slot&gt;没有内容哦&lt;/slot&gt;&lt;div&gt;&lt;input type="text" v-model="value" /&gt;&lt;div class="triangle_border_down" v-on:click="showPanel"&gt;&lt;span class="up" v-show="spanUpShow"&gt;&lt;/span&gt;&lt;span class="down" v-show="spanDownShow"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;child-component v-bind:list="list" v-on:tempFun="fatherFun" v-show="isShow"&gt;&lt;/child-component&gt;&lt;/div&gt;'</span></span><br></pre></td></tr></table></figure></p>
-<p>页面渲染结果是：<br><img src="https://upload-images.jianshu.io/upload_images/4853241-ad51082272b5baef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>父子组件间的插槽使用同上。更多插槽相关知识请查看官方文档。<br>demo源码地址：<a href="https://github.com/Lizer1995/v" target="_blank" rel="noopener">https://github.com/Lizer1995/v</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1820,7 +1818,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

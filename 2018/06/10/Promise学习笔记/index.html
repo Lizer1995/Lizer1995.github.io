@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="AngularJs," />
+  <meta name="keywords" content="es6," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="依赖注入是一种设计模式。在这种模式下，一个或更多的依赖（或服务）被注入（或者通过引用传递）到一个独立的对象（或客户端）中，然后成为了该客户端状态的一部分。 引用方式：123var app = angular.module(&apos;app&apos;,[     &apos;ngRoute&apos;,&apos;ngAnimate&apos;,&apos;Controller&apos;,&apos;filters&apos;,&apos;service&apos;,&apos;derectives&apos;]) angular">
-<meta name="keywords" content="AngularJs">
+<meta name="description" content="什么是Promise？Promise是es6新增的异步编程的一种解决方案，是es6的原生对象。它有三种状态：  pending 进行中 resolved 已完成 rejected 已失败当Promise的状态由pending转变为resolved时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态。  用法 用函数包装异步操作，返回Promise对象： 1234567891011121314">
+<meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS学习笔记（六）依赖注入">
-<meta property="og:url" content="http://yoursite.com/2017/09/28/AngularJS学习笔记（六）依赖注入/index.html">
+<meta property="og:title" content="Promise学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/06/10/Promise学习笔记/index.html">
 <meta property="og:site_name" content="Lizer的博客">
-<meta property="og:description" content="依赖注入是一种设计模式。在这种模式下，一个或更多的依赖（或服务）被注入（或者通过引用传递）到一个独立的对象（或客户端）中，然后成为了该客户端状态的一部分。 引用方式：123var app = angular.module(&apos;app&apos;,[     &apos;ngRoute&apos;,&apos;ngAnimate&apos;,&apos;Controller&apos;,&apos;filters&apos;,&apos;service&apos;,&apos;derectives&apos;]) angular">
+<meta property="og:description" content="什么是Promise？Promise是es6新增的异步编程的一种解决方案，是es6的原生对象。它有三种状态：  pending 进行中 resolved 已完成 rejected 已失败当Promise的状态由pending转变为resolved时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态。  用法 用函数包装异步操作，返回Promise对象： 1234567891011121314">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/img/4853241-97e2cc53ed6e2ab0.png">
-<meta property="og:updated_time" content="2018-05-13T03:14:50.000Z">
+<meta property="og:updated_time" content="2018-06-10T04:49:29.984Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS学习笔记（六）依赖注入">
-<meta name="twitter:description" content="依赖注入是一种设计模式。在这种模式下，一个或更多的依赖（或服务）被注入（或者通过引用传递）到一个独立的对象（或客户端）中，然后成为了该客户端状态的一部分。 引用方式：123var app = angular.module(&apos;app&apos;,[     &apos;ngRoute&apos;,&apos;ngAnimate&apos;,&apos;Controller&apos;,&apos;filters&apos;,&apos;service&apos;,&apos;derectives&apos;]) angular">
-<meta name="twitter:image" content="http://yoursite.com/img/4853241-97e2cc53ed6e2ab0.png">
+<meta name="twitter:title" content="Promise学习笔记">
+<meta name="twitter:description" content="什么是Promise？Promise是es6新增的异步编程的一种解决方案，是es6的原生对象。它有三种状态：  pending 进行中 resolved 已完成 rejected 已失败当Promise的状态由pending转变为resolved时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态。  用法 用函数包装异步操作，返回Promise对象： 1234567891011121314">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/28/AngularJS学习笔记（六）依赖注入/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/10/Promise学习笔记/"/>
 
 
 
 
 
-  <title>AngularJS学习笔记（六）依赖注入 | Lizer的博客</title>
+  <title>Promise学习笔记 | Lizer的博客</title>
   
 
 
@@ -289,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/AngularJS学习笔记（六）依赖注入/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/Promise学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lizer">
@@ -306,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">AngularJS学习笔记（六）依赖注入</h1>
+          <h1 class="post-title" itemprop="name headline">Promise学习笔记</h1>
         
 
         <div class="post-meta">
@@ -318,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T09:27:00+08:00">
-                2017-09-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-10T12:48:34+08:00">
+                2018-06-10
               </time>
             
 
@@ -341,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/框架/" itemprop="url" rel="index">
-                    <span itemprop="name">框架</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -378,9 +376,34 @@
       
 
       
-        <p>依赖注入是一种设计模式。在这种模式下，一个或更多的依赖（或服务）被注入（或者通过引用传递）到一个独立的对象（或客户端）中，然后成为了该客户端状态的一部分。</p>
-<p><img src="/img/4853241-97e2cc53ed6e2ab0.png" alt="image.png"><br>引用方式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>,[</span><br><span class="line">     <span class="string">'ngRoute'</span>,<span class="string">'ngAnimate'</span>,<span class="string">'Controller'</span>,<span class="string">'filters'</span>,<span class="string">'service'</span>,<span class="string">'derectives'</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure></p>
-<p>angularJS在启动的时候就会去检测依赖中的模块有没有被注册或者说有没有被加载进来。如果缺失模块就会报错。</p>
+        <h3 id="什么是Promise？"><a href="#什么是Promise？" class="headerlink" title="什么是Promise？"></a>什么是Promise？</h3><p>Promise是es6新增的异步编程的一种解决方案，是es6的原生对象。<br>它有三种状态：</p>
+<ul>
+<li>pending 进行中</li>
+<li>resolved 已完成</li>
+<li>rejected 已失败<br>当Promise的状态由pending转变为resolved时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态。</li>
+</ul>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><ol>
+<li><p>用函数包装异步操作，返回Promise对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">       resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">run2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第二个run'</span>);</span><br><span class="line">       resolve(<span class="string">'第二个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链式操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">run1().then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//then中放的语句是等run执行完毕后才执行的</span></span><br><span class="line">  <span class="built_in">console</span>.log(data);<span class="comment">//这个data是resolve(xxx)中传入的xxx</span></span><br><span class="line">  <span class="keyword">return</span> run2();<span class="comment">//这里run2的返回值也是一个Promise对象，它的resolve会传给下一个then</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"结束了"</span>;<span class="comment">//也可以直接把数据传给下一个then</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);<span class="comment">//接收到上一个then return的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reject怎么用？<br>resolve是已完成后的回调函数，reject是已失败后的回调函数。<br>reject就是把Promise的状态置为rejected，然后在then中捕捉到，或者用catch捕捉，执行“失败”的回调。<br>把代码改为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="comment">//这里做一些异步操作</span></span><br><span class="line">     setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">       <span class="keyword">if</span>(a === <span class="string">'reject'</span>)&#123;</span><br><span class="line">         reject(<span class="string">'第一个run已失败'</span>);<span class="comment">//reject代表异步操作执行失败后的回调函数</span></span><br><span class="line">       &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,<span class="number">10000</span>)</span><br><span class="line">   &#125;);</span><br><span class="line">   <span class="keyword">return</span> p;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">run1(<span class="string">'reject'</span>).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'resolved'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(data);</span><br><span class="line"> &#125;,(reason)=&gt;&#123;<span class="comment">//then的第二个参数捕捉reject</span></span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'rejected'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(reason);</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者用catch来捕捉reject并制定reject的回调：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">run1(<span class="string">'reject'</span>).then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'resolved'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(data);</span><br><span class="line"> &#125;).catch(<span class="function">(<span class="params">reason</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'rejected'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(reason);</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>用catch的好处是：resolve回调抛出异常时，不会报错卡死JS，而是会进到这个catch方法中。</p>
+<ol start="4">
+<li>all的用法：<br>Promise.all接收一个函数数组参数，里面的值最终都返回Promise对象。数组中的异步操作并行执行，等它们都执行完后才会进到then里面，all会把所有的异步操作的结果放进一个数组中传给then;如果执行失败，则返回最先被reject的结果值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([run1(),run2(),run3()]).then(<span class="function">(<span class="params">result</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(result);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="5">
+<li>race的用法：<br>all的执行顺序是按数组下标先后执行，但race是哪个执行得快先返回哪个结果值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run1</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">       <span class="comment">//这里做一些异步操作</span></span><br><span class="line">       setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'第一个run'</span>);</span><br><span class="line">         <span class="keyword">if</span>(a === <span class="string">'reject'</span>)&#123;</span><br><span class="line">           reject(<span class="string">'第一个run已失败'</span>);<span class="comment">//reject代表异步操作执行失败后的回调函数</span></span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">           resolve(<span class="string">'第一个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">         &#125;</span><br><span class="line">       &#125;,<span class="number">10000</span>)</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> p;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">run2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">       <span class="comment">//这里做一些异步操作</span></span><br><span class="line">       setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'第二个run'</span>);</span><br><span class="line">         resolve(<span class="string">'第二个run已完成'</span>);<span class="comment">//resolve代表异步操作执行成功后的回调函数</span></span><br><span class="line">       &#125;,<span class="number">5000</span>)</span><br><span class="line">     &#125;);</span><br><span class="line">     <span class="keyword">return</span> p;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">Promise</span>.race([run1(),run2()]).then(<span class="function">(<span class="params">result</span>)=&gt;</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(result);</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>打印结果，可以看到，上面的代码run2先被执行，因为run2更快。</p>
 
       
     </div>
@@ -398,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJs/" rel="tag"># AngularJs</a>
+            <a href="/tags/es6/" rel="tag"># es6</a>
           
         </div>
       
@@ -411,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/27/AngularJS学习笔记（五）过滤器/" rel="next" title="AngularJS学习笔记（五）过滤器">
-                <i class="fa fa-chevron-left"></i> AngularJS学习笔记（五）过滤器
+              <a href="/2018/06/09/对象代理（数据隐私保护）/" rel="next" title="对象代理（数据隐私保护）">
+                <i class="fa fa-chevron-left"></i> 对象代理（数据隐私保护）
               </a>
             
           </div>
@@ -420,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/12/AngularJS学习笔记（七）服务/" rel="prev" title="AngularJS学习笔记（七）服务">
-                AngularJS学习笔记（七）服务 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,8 +494,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Promise？"><span class="nav-number">1.</span> <span class="nav-text">什么是Promise？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法"><span class="nav-number">2.</span> <span class="nav-text">用法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
